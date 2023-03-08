@@ -1,0 +1,214 @@
+.head-img img{
+    width: 100%;
+}
+body{
+    background: url('../images/storeInfo/bg.png')no-repeat;
+    background-attachment: fixed;
+    /* background-size: 100%; */
+}
+.main-body{
+    padding:0 15px;
+}
+.cont-box{
+    display: flex;
+    align-items:flex-end;
+}
+.center-box{
+    flex: 8;
+}
+.left-box,.right-box{
+    flex: 3;
+}
+.right-box img{
+    width: 100%;
+}
+.left-box img{
+    width: 100%;
+}
+.center-box{
+    margin: 0  15px;
+}
+.cnter-bt-img {
+    background: url(../images/storeInfo/kuang2.png)no-repeat;
+    background-size: 100%;
+}
+.cnter-bt-img img{
+    width: 100%;
+}
+.head-border{
+    border-left: 2px solid #57C7ED;
+    padding: 10px;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(to left, rgba(255, 255, 255, 0), #57C7ED);
+    border-image-slice: 10;
+}
+
+.head-line-box{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+
+}
+.head-line-1{
+    flex: 1;
+}
+.head-line-1 p:nth-child(1) span{
+    
+}
+.head-line-1 .name{
+    color: #4CC3FF;
+    font-size: 11px;
+}
+
+.head-line-2{
+    flex: 1;
+}
+.head-line-2 p{
+    }
+.head-line-2 p:nth-child(1) span{
+    color: #0BF9FF;
+    font-size: 26px;
+    text-shadow: rgba(235, 235, 235, 0.397) 1px 1px 5px;
+    position: relative;
+}
+.head-line-2 p:nth-child(1) span::after{
+    background: url(../images/storeInfo/xinzen.png)no-repeat;
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-size: 100% ;
+}
+.head-line-2 p:nth-child(2){
+    color: #4CC3FF;
+    font-size: 11px;
+}
+
+
+.con-iofo{
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.con-iofo .con-iofo-in{
+    width: calc((100% - 40px)/3);
+    background: url(../images/storeInfo/kuang.png);
+    font-size: 16px;
+    background-size: 100% 100%;
+    padding: 23px 15px;
+    box-sizing: border-box;
+}
+.con-iofo .con-iofo-in .border-box-s img{
+    width: 20px;
+    height: 22px;
+    margin-right: 20px;
+}
+.tip{
+    color: #00FFF6;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;;
+
+}
+.con-iofo .con-iofo-in .border-box-s .flex-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 0 0;
+    margin: 5px 0;
+    align-items: center;
+    background: -moz-linear-gradient( to left, rgba(0, 255, 247, 0.212) 0%, rgba(0, 255, 247, 0) 100%);
+    background: -webkit-linear-gradient( to left, rgba(0, 255, 247, 0.212) 0%,rgba(0, 255, 247, 0) 100%);
+    background: -o-linear-gradient( to left, rgba(0, 255, 247, 0.212) 0%,rgba(0, 255, 247, 0) 100%);
+    background: -ms-linear-gradient( to left, rgba(0, 255, 247, 0.212) 0%,rgba(0, 255, 247, 0) 100%);
+    background: linear-gradient( to left, rgba(0, 255, 247, 0.212) 0%,rgba(0, 255, 247, 0) 100%);
+}
+.con-iofo .con-iofo-in .border-box-s .flex-box span:nth-child(1){
+    color: #FFFFFF;
+}
+.con-iofo .con-iofo-in .border-box-s .flex-box span:nth-child(2){
+    color: #FFEA00;
+}
+
+
+
+#pltom1 .mt-number-animate {
+    line-height: 40px;
+    height: 40px;
+    ; font-size: 36px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+#pltom1 .mt-number-animate .mt-number-animate-dot {
+    width: 8px;
+    line-height: 40px;
+    float: left;
+    text-align: center;
+    color: #FFEA00;
+}
+
+#pltom1 .mt-number-animate .mt-number-animate-dom {
+    width: 20px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 0;
+}
+
+#pltom1 .mt-number-animate .mt-number-animate-dom .mt-number-animate-span {
+    width: 100%;
+    float: left;
+    color: #E4FF00;
+    font-size: 32px;
+    text-shadow: rgba(235, 235, 235, 0.397) 1px 1px 5px
+}
+
+#pltom2 .mt-number-animate {
+    height: 20px;
+    line-height: 20px;
+    font-size: 36px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+#pltom2 .mt-number-animate .mt-number-animate-dot {
+    width: 8px;
+    height: 20px;
+    float: left;
+    text-align: center;
+    color: #FFEA00;
+    font-size: 20px;
+}
+
+#pltom2 .mt-number-animate .mt-number-animate-dom {
+    width: 12px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 0;
+}
+
+#pltom2 .mt-number-animate .mt-number-animate-dom .mt-number-animate-span {
+    width: 100%;
+    float: left;
+    color: #FFEA00;
+    font-size: 20px;
+    text-shadow: rgba(235, 235, 235, 0.397) 1px 1px 5px
+}
+
+.border-line{
+    -moz-border-image:url(../images/storeInfo/kuang.png) 30 30 stretch;	/* Old Firefox */
+    -webkit-border-image:url(../images/storeInfo/kuang.png) 30 30 stretch;	/* Safari and Chrome */
+    -o-border-image:url(../images/storeInfo/kuang.png) 30 30 stretch;	/* Opera */
+    border-image:url(../images/storeInfo/kuang.png) 30 30 stretch;
+    border:10px solid transparent;
+}
+.zxt-id{
+    padding: 10px 3px;
+    background: url(../images/storeInfo/kuang.png)no-repeat;
+    background-size: 100% 100%;
+}

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>购买套餐</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/buyPackages-middle.css" media="screen and (min-width: 100px)" />
+	<link rel="stylesheet" type="text/css" href="css/ buyPackages-max.css" media="screen and (min-width: 1600px)" />
+	<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+</head>
+
+<body>
+	<header class="clearfix">
+		<div class="block">
+			<ul class="menu clearfix">
+				<li>
+					<a href="./index.html" class="home">首页</a>
+				</li>
+				<li>	<a href="./index.html" class="home">社群场景</a></li>
+				<li>	<a href="./index.html" class="home">功能大全</a></li>
+				<li><a href="./index.html" class="home">联系我们</a></li>
+				<li class="user-infor">
+					<div id="usedr-box">
+						<img src="./images/my.png" alt="">
+						<span id="user-name"></span></div>
+					<div class="tip-tip">
+						<img src="./images/tiip.png" alt=""> 
+						<div class="tip-tip-cont">
+							<p class="un-bound"><img src="./images/un_bind.png" alt="">解除绑定</p>
+							<p>
+								<a href="./changePwd.html"> <img src="./images/change_paw.png" alt="">修改密码</a>
+							</p>
+							<p id="logout"><img src="./images/log_out.png" alt="">退出登录</p>
+						</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<div class="container">
+		<div class="title">
+			<h2>购买套餐</h2>
+			<div class="sub">
+				(未购买套餐无法登录客户端)
+			</div>
+		</div>
+		<div class="tab-list">
+
+		</div>
+		<div class="footer-btn">
+			<div class="sure-grop">
+				<div class="settlement " style="margin-right: 31px;cursor: pointer;">
+						结算
+				</div>
+				<div class="free" style="margin-right: 31px;display:none;cursor: pointer;">
+					结算
+				</div>
+			</div>
+		
+			<div class="download" style="cursor: pointer;">
+				<a href="https://watuan-shop.oss-cn-hangzhou.aliyuncs.com/weidu/%E5%BE%AE%E5%BA%A61.0.0.8.exe">下载客户端</a>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+
+	</div>
+	<div id="pay">
+
+	</div>
+	<div class="un-bind-box" id="un-bind-box" style="display:none">
+		<div class="chose-tab">
+			<span class="active">微信验证</span>
+			<span>手机号验证</span>
+		</div>
+		<div class="er-wei-box show-box">
+			<div id="un-bind-box-img"></div>
+			<p>请使用当前绑定的微信号扫码</p>
+		</div>
+		<div class="phone-code  show-box" style="display:none ">
+			<p id="bind-phone">已绑定手机号：18359372343</p>
+			<p>短信验证码 <input type="text" placeholder="请输入验证码" id="relieve-code"><span id="bind-phone-code">发送验证码</span></p>
+			<div class="unbind-bt">
+				<button id="relieve">解除绑定</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/art-template.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/utils.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/html" id="list">
+			<ul class="tab-area clearfix">
+				{{each data as item index}}
+				<li>
+					<div class="version">
+						{{if item.name === '免费版'}}
+						<img src="images/free-version.png" /> {{else if item.name === '升级版'}}
+						<img src="images/upgraded-version.png" /> {{else}}
+						<img src="images/flagship-version.png" /> {{/if}}
+					</div>
+					<div class="con">
+							{{if item.week=="0.00"}}
+							<div class="price-info">
+									<span class="price">{{item.month}}</span>
+									<span class="text">{{item.vip_free}}天</span>
+								</div>
+							{{else }}
+						<div class="price-info">
+							<span class="price">{{item.month}}</span>
+							<span class="text">月份 /元</span>
+						</div>
+						{{/if}}
+						<div class="line"></div>
+						<div class="status">
+							仅支持一个微信号
+						</div>
+
+					</div>
+					<div class="check-group hide">
+						<img src="images/check.png" />
+					</div>
+					<div class="popup" attr-id="{{item.id}}">
+						{{if item.week=="0.00"}}
+						<div class="btn" attr-tip="month" attr-money='0'  attr-datas="vip_week_end_time">
+							<span class="num" >{{item.week}}</span>
+							<span class="consult">{{item.vip_free}}天</span>
+						</div>
+					
+						{{else }}
+						<div class="btn" attr-tip="month" attr-datas="vip_month_end_time" >
+								<span class="num" >{{item.month}}</span>
+								<span class="consult">月份 /元</span>
+							</div>
+							<div class="btn" attr-tip="week"  attr-datas="vip_week_end_time">
+								<span class="num" >{{item.week}}</span>
+								<span class="consult">季度 /元</span>
+							</div>
+							<div class="btn"attr-tip="year"  attr-datas="vip_year_end_time">
+								<span class="num" >{{item.year}}</span>
+								<span class="consult">年 /元</span>
+							</div>
+						{{/if}}
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+		</script>
+	<script type="text/html" id="con">
+			<div class="version">
+				<span class="text">购买套餐</span>
+				<span id="set-meal"></span>
+			</div>
+			<div class="cost">
+				<span class="text">即将缴费</span>
+				<span class="price" id="parice-numb">￥999.00</span>
+			</div>
+			<div class="cost">
+				<span class="text" id="end-time"></span>
+			</div>
+			<div class="pay">
+				<span class="text">支付方式</span>
+				<div class="weixin">
+					<img src="images/weixin.png" />
+					<span>微信</span>
+				</div>
+			</div>
+		</script>
+	<script type="text/html" id="payfor">
+			<div class="price-info">
+				<div class="price-text">
+					应付金额  
+				</div>
+				<div class="money">
+					￥<span class="total">{{data.realprice}}</span>
+				</div>
+			</div>
+			<div class="qrcode clearfix">
+				<div class="title">微信扫码</div>
+				<div class="qrcode-info">
+					<div class="qrcode-img">
+						<img src="http://qr.liantu.com/api.php?el=h&w=210&m=10&text={{data.qrcode}}" />
+					</div>
+					<p>请使用微信扫码，支付成功后自动开通服务</p>
+					<div class="finish-pay" style="cursor:pointer">
+						我已完成支付
+					</div>
+				</div>
+			</div>
+		</script>
+
+	<script type="text/javascript">
+		function getQueryVariable(variable) {
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i = 0; i < vars.length; i++) {
+				var pair = vars[i].split("=");
+				if (pair[0] == variable) { return pair[1]; }
+			}
+			return (false);
+		}
+
+
+		if (getCookie("token") == "" || getCookie("token") == undefined) {
+			window.location.href = "./login.html"
+		} else {
+			// window.location.href = "./buyPackages.html"
+			$("#user-name").html(getCookie("mobile"))
+			$("#bind-phone").html("已绑定手机号：" + getCookie("mobile"))
+		}
+		var is_set_meal = true  //判断是否选择套餐
+		var dao_time = '';
+		var url = api_url;
+			selectId = ''
+		myAjax('post', url + "/index/orders/vip", {
+			"token": getCookie("token")
+		}, function (res) {
+			if(res.code==0){
+				removeCookie("token")
+				removeCookie("mobile")
+				window.location.href="./login.html"
+			}
+			$(".tab-list").html(template('list', {
+				data: res.data
+			}))
+			// 鼠标滑入滑出
+			$('.tab-list ul li').hover(function () {
+				// console.log($(this).html())
+				if (!$(this).find(".popup").hasClass("flex-colum")) $(this).find(".popup").addClass("flex-colum")
+			}, function () {
+				$(this).find(".popup").removeClass("flex-colum")
+			});
+		}, 'json')
+		// 免费结算
+		$(".free").on("click", function () {
+			if (is_set_meal) {
+				layer.msg("请选择您需要的套餐!");
+				return
+			}
+			layer.confirm('您确定要购买么?', {
+				btn: ['确定', '取消'], //按钮
+				title: ''
+			}, function () {
+
+				myAjax('post', url + "/index/orders/order_pay", {
+					"token": getCookie("token"),
+					"price": 0,
+					"vip": selectId
+				}, function (res) {
+					if (JSON.parse(res).msg == "购买成功") {
+						clearInterval(dao_time);
+						layer.msg("购买成功!");
+						layer.close()
+					}else{
+						layer.msg(JSON.parse(res).msg);
+					}
+				})
+			}, function () {
+			});
+
+
+		})
+		// 去结算
+		$(".settlement").on("click", function () {
+			if (is_set_meal) {
+				layer.msg("请选择您需要的套餐!");
+				return
+			}
+			var parice_numb = ""
+			var end_datas = "" //选择的套餐类型
+
+			var chose_datas_end = ""
+			myAjax('post', url + "/index/orders/vip_select_id", {
+				"token": getCookie("token"),//'638f2877-04da-4cec-89b0-1603c7652e7d',
+				id: selectId
+			}, function (res) {
+				console.log(res.data)
+				$("#content").html(template('con', {
+					data: res.data
+				}))
+
+				// console.log(res);
+				res.data.forEach((Element, index) => {
+					// console.log(chose_datas)
+					// if(Element[chose_datas]){
+					// 	console.log(Element[chose_datas])
+					// }else{
+					// 	console.log("----"+Element[chose_datas])
+					// }
+					if (!Element[chose_datas]) {
+						console.log(Element);
+					} else {
+						parice_numb = Element[chose_datas]
+						console.log(Element);
+					}
+					if (!Element[attr_datas]) {
+						// parice_numb = Element[chose_datas]
+					} else {
+						chose_datas_end = Element[attr_datas]
+					}
+				});
+				$("#set-meal").html(res.data[0].name)
+				$("#parice-numb").html(parice_numb)
+				$("#end-time").html("购买后套餐有效期至" + chose_datas_end)
+				// 关闭定时器
+				$("body").on("click", function () {
+					clearInterval(dao_time)
+				})
+				layer.open({
+					type: 1,
+					title: ['购买套餐'],
+					area: ['881px', '650px'], //宽高
+					btn: ['取消', '去支付'],
+					shadeClose: true,
+					yes: function (index, layero) {
+						layer.close(index)
+						console.log('btn11')
+					},
+					btn2: function (index, layero) {
+						layer.close(index)
+						myAjax('post', url + "/index/orders/order_pay", {
+							"token": getCookie("token"),//'638f2877-04da-4cec-89b0-1603c7652e7d',
+							"price": parice_numb,
+							"vip": selectId
+						}, function (res) {
+							console.log(JSON.parse(res));
+							$("#pay").html(template('payfor', {
+								data: JSON.parse(res).data
+							}));
+							$(".finish-pay").click(function(event){
+								event.stopPropagation();
+								clearInterval(dao_time);
+								dao_time = setInterval(function () {
+								// alert()
+								myAjax('post', url + "/index/orders/polling", {
+									"token": getCookie("token"),//'638f2877-04da-4cec-89b0-1603c7652e7d',
+									"orderno": JSON.parse(res).data.orderno,
+								}, function (res) {
+									if (JSON.parse(res).msg == "购买成功") {
+										clearInterval(dao_time);
+										layer.msg("支付成功!");
+										setTimeout(() => {
+											layer.closeAll()
+											
+										}, 1000);
+									}else{
+										
+									}
+								}, 99)
+							}, 2000)
+							layer.msg('你还未完成支付！');
+							})
+							dao_time = setInterval(function () {
+								// alert()
+								myAjax('post', url + "/index/orders/polling", {
+									"token": getCookie("token"),//'638f2877-04da-4cec-89b0-1603c7652e7d',
+									"orderno": JSON.parse(res).data.orderno,
+								}, function (res) {
+									if (JSON.parse(res).msg == "购买成功") {
+										clearInterval(dao_time);
+										layer.msg("支付成功!");
+										setTimeout(() => {
+											layer.closeAll()
+											
+										}, 1000);
+									}else{
+										// layer.msg(JSON.parse(res).msg);
+									}
+								}, 99)
+							}, 2000)
+
+						})
+
+
+						layer.open({
+							type: 1,
+							title: ['扫一扫付款'],
+							area: ['681px', '660px'], //宽高
+							shadeClose: true,
+							yes: function (index, layero) {
+								layer.close(index)
+								console.log('btn11')
+							},
+							btn2: function (index, layero) {
+								layer.close(index)
+								console.log('btn2')
+							},
+							content: $("#pay")
+						});
+					},
+					content: $("#content")
+				});
+			}, 'json')
+
+
+		})
+
+		// 解除绑定
+		$(".un-bound").on("click", function () {
+
+
+			layer.open({
+				type: 1,
+				title: ['微信解绑', 'color:#fff;background-color:#404040;'],
+				area: ['881px', '650px'], //宽高
+				shadeClose: true,
+				yes: function (index, layero) {
+					layer.close(index)
+					console.log('btn11')
+				},
+				content: $("#un-bind-box")
+			});
+			var obj = new WxLogin
+				({
+					id: "un-bind-box-img",//div的id
+					appid: "wxf1f254809660175c",
+					scope: "snsapi_login",//写死
+					redirect_uri: encodeURI("http://wdo.fzwsc.com/index/wx/unlock_wx"),
+					state: "",
+					style: "black",//二维码黑白风格        
+					href: ""
+				});
+
+				$("#bind-phone-code").click(function(){
+						checkPhone(getCookie('mobile'));
+
+						var timeBackPwd = 60;
+						var bindCode = $("#bind-phone-code")
+						bindCode.attr("disabled", true)// disabled = true
+						bindCode.css({ "background": "#ffffff", "color": "#FF9A2E","border":"1px solid #FF9A2E",'pointer-events':'none' })
+						clearInterval(timeBackPwdSet)
+						var timeBackPwdSet = setInterval(() => {
+							timeBackPwd--;
+							if (timeBackPwd <= 0) {
+								$("#bind-phone-code").text("发送验证码")
+								clearInterval(timeBackPwdSet)
+								$("#bind-phone-code").attr("disabled", false);
+								$("#bind-phone-code").css({ "background": "#404040", "color": "#ffffff","border":'none','pointer-events':''})
+								return
+							}
+
+							$(this).text("剩余" + timeBackPwd + "S")
+						}, 1000)
+						myAjax('post', url + "/index/user/send_sms", { "mobile": getCookie('mobile') }, function (res) {
+							layer.msg("发送成功!");
+
+						}, 'json')
+				})
+
+				$("#relieve").click(function(){
+					var code = $("#relieve-code").val();
+					if(code==''){
+						layer.msg("请输入手机验证码");
+						return
+					}
+					myAjax('post', url + "/index/wx/unlock", { "mobile": getCookie('mobile'),'code':code }, function (res) {
+							 if(res.code==200){
+							 }
+
+						}, 'json')
+				})
+		})
+
+
+
+
+		// 点击弹出的按钮
+		$(".tab-list").on("click", ".btn", function () {
+			if (getCookie("unBound") == "") {   //没有绑定
+				$(".un-bound").hide();
+			}
+			var price = $(this).children(".num").html()
+			var consult = $(this).children(".consult").html()
+			selectId = $(this).parent().attr("attr-id");
+			chose_datas = $(this).attr("attr-tip")
+			attr_datas = $(this).attr("attr-datas")
+			attr_money = $(this).attr("attr-money")
+			// 判断免费
+			if (attr_money == 0) {
+				$(".settlement").hide()
+				$(".free").show()
+			} else {
+				$(".settlement").show()
+				$(".free").hide()
+			}
+			is_set_meal = false
+			$(this).parent().removeClass("flex-colum")
+			$(".tab-area").children("li").children(".check-group").addClass("hide")
+			$(this).parents("li").children(".check-group").removeClass("hide")
+			$(this).parents("li").find(".price-info .price").html(price)
+			$(this).parents("li").find(".price-info .text").html(consult);
+
+			$(".sure-grop").children().addClass("active-sure")
+		})
+
+		$(".chose-tab span").click(function () {
+			$(this).addClass("active").siblings().removeClass('active');
+			$(".show-box").hide()
+			console.log($(".show-box").length);
+			$(".show-box").eq($(this).index()).show()
+
+		})
+
+		$(".download").on("click", function () {
+
+		})
+
+		$('#usedr-box').click(function (event) {
+			if (getCookie("unBound") == "") {   //没有绑定
+				$(".un-bound").hide();
+			}else{
+				$(".un-bound").show();
+			}
+			//取消事件冒泡  
+			event.stopPropagation();
+			//按钮的toggle,如果div是可见的,点击按钮切换为隐藏的;如果是隐藏的,切换为可见的。  
+			$('.tip-tip').fadeToggle(500);
+			return false;
+		});
+		// 退出登录
+		$("#logout").click(function () {
+			layer.confirm('您是确定要退出？', {
+				btn: ['确定', '取消'], //按钮
+				title: ''
+			}, function () {
+				removeCookie("token")
+				removeCookie("mobile")
+				window.location.reload()
+			}, function () {
+			});
+
+		})
+		//点击空白处隐藏弹出层，下面为滑动消失效果和淡出消失效果。
+		$(document).click(function (event) {
+			var _con = $('.tip-tip'); // 设置目标区域
+			if (!_con.is(event.target) && _con.has(event.target).length === 0) { // Mark 1
+				//$('#divTop').slideUp('slow');   //滑动消失
+				$(".tip-tip").hide(); //淡出消失
+			}
+		});
+		function checkPhone(phone) {
+                if (!(/^1[3456789]\d{9}$/.test(phone))) {
+                    layer.msg("请输入正确的手机号");
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+	</script>
+</body>
+
+</html>

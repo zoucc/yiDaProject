@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>供应链数据中心</title>
+		<link rel="stylesheet" type="text/css" href="./css/supply.css"/>
+	</head>
+	<body>
+		<div class="head-img">
+			<img src="images/supply/head.png" />
+		</div>
+		<div class="main-body">
+			<div class="main-left">
+				<img src="images/supply/1.png" >
+			</div>
+			<div class="main-right">
+				<div class="ranking-list">
+					<div class="group">
+						<img src="images/supply/pic-one.png" class="pic" />
+						<img src="images/supply/pic-two.png" class="pic" />
+						<img src="images/supply/pic-three.png" class="pic" />
+						<div class="gys-list">
+							<div class="gys">
+								<img src="images/supply/supplier.png" class="icon">
+								<div class="numb">
+									<div class="numberRun1" id="pltom1">
+										
+									</div>
+								</div>
+								<div class="text">个</div>
+							</div>
+							<div class="gys">
+								<img src="images/supply/goods-num.png" class="icon">
+								<div class="numb">
+									<div class="numberRun2" id="pltom2">
+									</div>
+								</div>
+								<div class="text">个</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="goods-list">
+					<div class="img-bg">
+						<h4>各品类商品销量趋势</h4>
+						<div class="date">2019/12/18-2019/12/24|过去7天（12-14二）</div>
+					   <div id="main" style="width: 100%;height: 230px;"></div>
+					</div>
+					<div class="img-bg ml">
+						<h4>服饰品类不同商品的转化</h4>
+						<div class="date">2019/12/18-2019/12/24|过去7天（12-14二）</div>
+					    <table>
+					    	<tr class="top">
+								<th>商品一级分类</th>
+								<th>商品名称</th>
+								<th>购买次数</th>
+								<th>购买人数</th>
+								<th>总销售额</th>
+							</tr>
+					    	<tr class="list">
+								<td>护肤品</td>
+								<td>欧莱雅小蜜罐</td>
+								<td>149</td>
+								<td>30</td>
+								<td>20906</td>
+							</tr>
+							<tr>
+								<td>食品</td>
+								<td>养乐多</td>
+								<td>116</td>
+								<td>23</td>
+								<td>14449</td>
+							</tr>
+							<tr>
+								<td>手机数码</td>
+								<td>华为畅享10</td>
+								<td>101</td>
+								<td>20</td>
+								<td>13201</td>
+							</tr>
+							<tr>
+								<td>服饰</td>
+								<td>长袖针织连衣裙</td>
+								<td>94</td>
+								<td>18</td>
+								<td>11595</td>
+							</tr>
+					    </table>
+					</div>
+					<div class="img-bg">
+						<h4>各品类的销售情况</h4>
+						<div class="date">2019/12/18-2019/12/24|过去7天（12-14二）</div>
+					    <table>
+					    	<tr class="top">
+								<th>商品一级分类</th>
+								<th>购买次数</th>
+								<th>购买人数</th>
+								<th>销售额</th>
+							</tr>
+					    	<tr class="list">
+								<td>护肤品</td>
+								<td>238</td>
+								<td>238</td>
+								<td>143123</td>
+							</tr>
+							<tr>
+								<td>食品</td>
+								<td>226</td>
+								<td>226</td>
+								<td>134801</td>
+							</tr>
+							<tr>
+								<td>手机数码</td>
+								<td>220</td>
+								<td>220</td>
+								<td>129185</td>
+							</tr>
+							<tr>
+								<td>服饰</td>
+								<td>213</td>
+								<td>212</td>
+								<td>136762</td>
+							</tr>
+					    </table>
+					</div>
+					<div class="img-bg ml">
+						<h4>各品类的访购概况</h4>
+						<div class="date">2019/12/18-2019/12/24|过去7天（12-14二）</div>
+					    <table>
+					    	<tr class="top">
+								<th>商品一级分类</th>
+								<th>浏览商品详情页</th>
+								<th>支付订单详情</th>
+								<th>访购比(%)</th>
+							</tr>
+					    	<tr class="list">
+								<td>护肤品</td>
+								<td>408</td>
+								<td>182</td>
+								<td>44.61%</td>
+							</tr>
+							<tr>
+								<td>食品</td>
+								<td>365</td>
+								<td>225</td>
+								<td>61.64%</td>
+							</tr>
+							<tr>
+								<td>手机数码</td>
+								<td>359</td>
+								<td>200</td>
+								<td>55.71%</td>
+							</tr>
+							<tr>
+								<td>服饰</td>
+								<td>340</td>
+								<td>208</td>
+								<td>61.18%</td>
+							</tr>
+					    </table>
+					</div>
+					<!-- <img src="images/supply/2.png" class="ml" /> -->
+					<!-- <img src="images/supply/new3.png" class="ml" /> -->
+					<!-- <img src="images/supply/4.png"  />
+					<img src="images/supply/5.png" class="ml" /> -->
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/number.js"></script>
+		<script src="js/dateDeal.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			 $(function () {
+				 var array = getDifferentDate(-6,1,'-'),yearArray = getDifferentDate(-6),digital = [],food = [],skincare = [],apparel = []
+				 for (var i = 0; i <=6; i++) {
+				 	digital.push(rnd(0,300))
+					food.push(rnd(0,300))
+					skincare.push(rnd(0,300))
+					apparel.push(rnd(0,300))
+				 }
+				 $(".date").html(yearArray[0]+'~'+yearArray[yearArray.length - 1]+'|过去'+(yearArray.length)+'天')
+				 var numRun1 = $(".numberRun1").numberAnimate({
+				     num: '10568',
+				     speed: 2000,
+				     symbol: ","
+				 });
+				 var nums1 =  10568;
+				 setInterval(function () {
+				     nums1 += rnd(0,3) ;
+					 // console.log(nums1)
+				     numRun1.resetData(nums1);
+				 }, 300000);
+				 
+				 // 
+				 var numRun2 = $(".numberRun2").numberAnimate({
+				     num: '215864',
+				     speed: 2000,
+				     symbol: ","
+				 });
+				 var nums2 =  215864;
+				 setInterval(function () {
+				     nums2 += rnd(0,2)
+				     numRun2.resetData(nums2);
+				 }, 8000);
+				 
+				 function rnd(min, max) {
+				     return Math.floor(Math.random() * (max - min + 1) + ~~min)
+				 }
+				 
+				 // 统计图
+				  var myChart = echarts.init(document.getElementById('main'));
+				  option = {
+				      legend: {
+						  top: 10,
+						  right: 40,
+				          data: [{name: "手机数码",textStyle: {color: '#FEAB67'}},
+						         {name: "食品",textStyle: {color: '#AB90DF'}},
+								 {name: "护肤品",textStyle: {color: '#43A7EF'}},
+								 {name: "服饰",textStyle: {color: '#DA6C75'}}],
+						  textStyle: {
+							  color: '#fff'
+						  }
+				      },
+					  grid: {
+						  top: 40,
+						  bottom: 80
+					  },
+				      xAxis: {
+				          type: 'category',
+				          data: array,
+				          axisTick: {  // x轴刻度线设置
+				          	inside: true,
+							alignWithLabel: true //  可以保证刻度线和标签对齐
+				          },
+						  axisLabel: {
+				            color: '#65C6E7'
+				          },
+						  axisLine: {
+							  lineStyle: {
+								  color: '#65C6E7'
+							  }
+						  }
+					  },
+				      yAxis: {
+				          type: 'value',
+						  name: '(次)',
+						   nameTextStyle: {
+							   color: '#65C6E7',
+							   padding: [0,36,0,0]
+						   },
+				             axisTick:{       //y轴刻度线
+				                "show":false
+				               },
+				              axisLabel: {
+				                 textStyle: {
+				                       color: '#65C6E7'
+				               }
+				              },
+				               axisLine: { // y轴设置
+				                 show: false,
+				              },
+				              // y轴分割线
+				              splitLine: {
+				                  lineStyle: {
+				                      color: 'rgba(101,198,231,.2)'
+				                  }
+				              }
+				      },
+				      series: [{
+				          name: '手机数码',
+				          data: digital,
+				          type: 'line',
+						  symbol: 'circle',  // 设置为圆圈
+				          symbolSize: 6,
+						  lineStyle: {
+							  color: '#FEAB67'
+						  },
+						  // 折线拐点标志的样式
+						  itemStyle: {
+						   color: '#FEAB67',
+						   borderWidth: 0
+						  }
+						   
+						   
+				      },
+					  {
+					      name: '食品',
+					      data: food,
+					      type: 'line',
+						  symbol: 'circle',  // 设置为圆圈
+					      symbolSize: 6,
+						  lineStyle: {
+						  	color: '#AB90DF'
+						  },
+						  // 折线拐点标志的样式
+						  itemStyle: {
+						   color: '#AB90DF',
+						    borderWidth: 0
+						  }
+					          
+					  },
+					  {
+					      name: '护肤品',
+					      data: skincare,
+					      type: 'line',
+						  symbol: 'circle',  // 设置为圆圈
+					      symbolSize: 6,
+					      lineStyle: {
+					     	color: '#43A7EF'
+					      },
+					     // 折线拐点标志的样式
+					     itemStyle: {
+					      color: '#43A7EF',
+					       borderWidth: 0
+					     }
+					  },
+					  {
+					      name: '服饰',
+					      data: apparel,
+					      type: 'line',
+						  symbol: 'circle',  // 设置为圆圈
+					      symbolSize: 6,
+						  lineStyle: {
+						  	color: '#DA6C75'
+						  },
+						  // 折线拐点标志的样式
+						  itemStyle: {
+						   color: '#DA6C75',
+						    borderWidth: 0
+						  }
+					          
+					  }
+					  
+					  
+					  ]
+				  };
+				  myChart.setOption(option);
+			 })
+		</script>
+	</body>
+</html>

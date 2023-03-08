@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-body">
+    <div class="from-main">
+        <div class="from-box">
+            <div class="from-cont">
+                <div class="info-img"><img src="./images/info_img.png" alt=""></div>
+                <!-- 密码找回 -->
+                <div class="info" id="info">
+                    <h1>密码找回</h1>
+                    <ul>
+                        <li>
+                            <div><img src="./images/phone.png" alt=""> <input type="text" id="info-phone"
+                                    placeholder="请输入手机号"></div>
+                        </li>
+                        <li>
+                            <div class="code-cont"><img src="./images/code.png" alt=""><input type="text"
+                                    id="reset-code" placeholder="请输入验证码">
+                                <button id="info-code" class="">发送验证码</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div><img src="./images/paw.png" alt=""><input type="password" id="reset-pwd-num"
+                                    placeholder="请输入密码"></div>
+                        </li>
+                        <li>
+                            <div><input id="reset-pwd-new" type="password" placeholder="请再次输入您的新密码"></div>
+                        </li>
+                        <li><button id="reset-pwd">重置密码</button></li>
+                        <li>
+                            <p class="tip finger" id="go-login">去登录</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 注册 -->
+                <div class="info" id="register">
+                    <h1>注册账号</h1>
+                    <ul>
+                        <li>
+                            <div><img src="./images/phone.png" alt=""> <input id="register-phne" type="text"
+                                    placeholder="请输入手机号"></div>
+                        </li>
+                        <li>
+                            <div class="code-cont"><img src="./images/code.png" alt=""><input type="text"
+                                    id="register-code-num" placeholder="请输入验证码">
+                                <button class="finger" id="register-code">发送验证码</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div><img src="./images/paw.png" alt=""><input id="register-pwd" type="password"
+                                    placeholder="请输入密码"></div>
+                        </li>
+                        <li>
+                            <div><input type="password" id="register-pwd-again" placeholder="请再次输入您的新密码"></div>
+                        </li>
+                        <li><button class="finger" id="go-to-login-welcome-bt">注册</button></li>
+                        <li>
+                            <p class="tip finger" id="go-to-login-welcome">已有账号？去登录</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 扫码登录 -->
+                <div class="welcome info" id="welcome">
+                    <div class="er-wei" id="er-wei-change"><img src="./images/er_ma.png" " title=" 扫码登录" alt=""></div>
+                    <h1 class="welcome-tip">欢迎登录</h1>
+                    <ul>
+                        <li>
+                            <div><img src="./images/phone.png" alt=""> <input type="text" id="login-phone"
+                                    placeholder="请输入手机号"></div>
+                        </li>
+                        <li>
+                            <div class="code-cont"><img src="./images/code.png" alt=""><input type="password" id="login-pwd"
+                                    placeholder="请输入密码">
+                                <!-- <p class="finger">发送验证码</p> -->
+                            </div>
+                        </li>
+                        <li class="forget finger" id='forget-pwd'> 忘记密码？</li>
+                        <li><button class="finger" id="login-bt">登录</button></li>
+                        <li>
+                            <p class="tip finger" id="go-to-login">没有账号？去注册</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 扫码登录绑定 -->
+                <div class="info bind-phone" id="bind-phone">
+                    <h1>绑定账号</h1>
+                    <ul>
+                        <li>
+                            <div><img src="./images/phone.png" alt=""> <input type="text" id="bind-phone-numb"  placeholder="请输入手机号"></div>
+                        </li>
+                        <li>
+                            <div class="code-cont"><img src="./images/code.png" alt="">
+                                <input id="bind-code-numb"  type="text"
+                                    placeholder="请输入验证码">
+                                <button class="finger" id="bind-code-code">发送验证码</button>
+                            </div>
+                        </li>
+                        <li><button class="finger" id="sure-bind">确认绑定</button></li>
+
+                    </ul>
+                </div>
+                <div class="info bind-phone" id="register-bind-phone">
+                    <h1 style=" color: #9CCA44">绑定账号</h1>
+                    <ul>
+                        <li>
+                            <div><input id="register-bind-phne" type="text"
+                                    placeholder="请输入手机号"></div>
+                        </li>
+                        <li>
+                            <div class="code-cont">
+                                <input type="text"
+                                    id="register-bind-code-num" placeholder="请输入验证码">
+                                <button class="finger" id="register-bind-code">发送验证码</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="register-bind-pwd" type="password"
+                                    placeholder="请输入密码"></div>
+                        </li>
+                        <li>
+                            <div><input type="password" id="register-bind-pwd-again" placeholder="请再次输入您的新密码"></div>
+                        </li>
+                        <li><button class="finger" id="go-to-bind-bt">注册并确认绑定</button></li>
+                        <li>
+                            <p class="tip finger">您还未注册账号</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- pc登录 -->
+                <div class="er-ma-login" id="er-ma-login">
+                    <div class="er-wei-pc finger" id="pc-er-wei-change"><img src="./images/pc_login.png" " title=" 扫码登录"
+                            alt=""></div>
+                    <div class="pwd-tip">密码登录入口</div>
+                    <div></div>
+                    <h1 class="sao-tip">扫码登录</h1>
+                    <div class="er-ma-img">
+                            <div id="login_container"></div>
+
+                            <!-- <iframe :src="wechat" sandbox="allow-scripts allow-top-navigation allow-same-origin" frameborder="0" width=350 height=500>
+
+                            </iframe> -->
+                        <!-- <img src="http://qr.liantu.com/api.php?el=h&w=210&m=10&text=https://open.weixin.qq.com/connect/qrconnect?appid=wxf1f254809660175c&redirect_uri=http://wdo.fzwsc.com/index/Wx/token&response_type=code&scope=snsapi_login&state=STATE#wechat_redirect" alt=""> -->
+                    </div>
+                    <!-- <p>微信扫一扫登录</p> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script> -->
+    <script src="js/lib/wxLogin.js"></script>
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/layer.js"></script>
+    <script src="./js/utils.js"></script>
+    <script>
+
+        var url = api_url;
+        $(function () {
+            function getQueryVariable(variable) {
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i = 0; i < vars.length; i++) {
+                    var pair = vars[i].split("=");
+                    if (pair[0] == variable) { return pair[1]; }
+                }
+                return (false);
+            }
+         
+            // 切换扫码 -- 二维码
+            $("#er-wei-change").click(function () {
+                $("#welcome").hide();
+                $("#er-ma-login").show();
+
+                var obj = new WxLogin
+                    ({
+                        id: "login_container",//div的id
+                        appid: "wxf1f254809660175c",
+                        scope: "snsapi_login",//写死
+                        redirect_uri: encodeURI(url+"/index/Wx/token"),
+                        state: "",
+                        style: "black",//二维码黑白风格        
+                        href: ""
+                    });
+            
+                //  if($(this).attr("id")=="er-wei-change"){
+                //     myAjax('post',url+"/index/wx/action_login",{},function(res){
+                //         console.log(res)
+                //        if(res.code==200){
+                //         // layer.msg("重置密码成功!");  
+                //        }
+                //      },'json')
+
+                //  }
+
+            });
+            $("#pc-er-wei-change").click(function () {
+                $("#welcome").show();
+                $("#er-ma-login").hide();
+            })
+            // 去注册
+            $("#go-to-login").click(function () {
+                $("#welcome").hide();
+                $("#register").show()
+            })
+            $("#go-to-login-welcome").click(function () {
+                $("#register").hide()
+                $("#welcome").show()
+            })
+            // 忘记密码
+            $("#forget-pwd").click(function () {
+                $("#welcome").hide();
+                $("#info").show()
+            })
+            $("#go-login").click(function () {
+                $("#welcome").show();
+                $("#info").hide()
+            })
+            $("#er-ma-login").click(function () {
+                $(this).hide()
+                // $("#bind-phone").show()
+            })
+            // 重置修改密码
+            $("#reset-pwd").click(function () {
+
+                var phone = $("#info-phone").val()
+                var reset_code = $("#reset-code").val()
+                var reset_pwd_num = $("#reset-pwd-num").val()
+                var reset_pwd_new = $("#reset-pwd-new").val()
+                if (!checkPhone(phone)) {
+                    return
+                }
+                if (reset_code == "") {
+                    layer.msg("验证码不能为空!");
+                    return
+                }
+                if (reset_pwd_num == "") {
+                    layer.msg("密码不能为空!");
+                    return
+                }
+                if (reset_pwd_new == "") {
+                    layer.msg("再次输入不能为空!");
+                    return
+                }
+                var data = {}
+                data.mobile = phone
+                data.captcha = reset_code
+                data.newpassword = reset_pwd_num
+                data.repassword = reset_pwd_new
+                myAjax('post', url + "/index/user/forget_password", data, function (res) {
+                    if (res.code == 200) {
+                        layer.msg("重置密码成功!");
+                    }
+                }, 'json')
+
+
+            })
+            // 密码找回code获取验证码
+            $("#info-code").click(function () {
+                var phone = $("#info-phone").val()
+                if (!checkPhone(phone)) {
+                    return
+                }
+                var timeBackPwd = 60;
+                $(this).attr("disabled", true)// disabled = true
+                $(this).css({ "background": "#ffffff", "color": "#FF9A2E" })
+                clearInterval(timeBackPwdSet)
+                var timeBackPwdSet = setInterval(function () {
+                    if (timeBackPwd <= 0) {
+                        clearInterval(timeBackPwdSet)
+                        console.log("000")
+                        $("#info-code").attr("disabled", false);
+                        $("#info-code").css({ "background": "#404040", "color": "#ffffff" })
+                        $("#info-code").text("发送验证码")
+                        return
+                    }
+                    timeBackPwd--;
+                    $("#info-code").text("剩余" + timeBackPwd + "S")
+
+                }, 1000)
+                myAjax('post', url + "/index/user/send_sms", { "mobile": phone }, function (res) {
+                    if (res.code == 200) {
+                        layer.msg("发送成功!");
+                    }
+                }, 'json')
+
+            });
+            if(getQueryVariable('lock_wechat')){
+                    // alert(getQueryVariable('lock_wechat'));
+                     $("#bind-phone").show()
+                     $("#welcome").hide();
+                    //  return
+            }
+            // 确认绑定
+            $("#sure-bind").click(function(){
+                var phone = $("#bind-phone-numb").val()
+                var code = $("#bind-code-numb").val()
+                if (!checkPhone(phone)) {
+                    return
+                }
+                if(code==''){
+                    layer.msg("请输入验证码!");
+                }
+                var par = {}
+                par.mobile = phone;
+                par.code = code;
+                par.userinfo = getQueryVariable('userinfo');
+                myAjax('post', url + "/index/wx/lock_wx_account",par, function (res) {
+                    if(res.code==200){
+                        layer.msg("绑定成功!");
+                        setCookie("token", res.data.token, 1);
+                        setCookie("mobile", res.data.mobile, 1);
+                        window.location.href='./index.html'
+                        return
+                    }
+                        if(res.code==2){
+                            $("#bind-phone").hide();
+                             $("#register-bind-phone").show() 
+                             return
+                        }
+                    
+                }, 'json')
+            })
+        // 注册绑定
+        $("#go-to-bind-bt").click(function(){
+                var phone = $("#register-bind-phne").val()
+                var code = $("#register-bind-code-num").val()
+                var pwd = $("#register-bind-pwd").val()
+                var pwdAgain = $("#register-bind-pwd-again").val()
+                if (!checkPhone(phone)) {
+                    return
+                }
+                if(code==''){
+                    layer.msg("请输入验证码!");
+                }
+                if (pwd == "") {
+                    layer.msg("密码不能为空!");
+                    return
+                }
+                if (pwdAgain == "") {
+                    layer.msg("密码再次不能为空!");
+                    return
+                }
+                if (!(pwd === pwdAgain)) {
+                    layer.msg("两次输入的密码不同!");
+                    return
+
+                }
+                var par = {}
+                par.mobile = phone;
+                par.captcha = code;
+                par.password = pwd;
+                par.repassword = pwdAgain;
+                par.userinfo = getQueryVariable('userinfo');
+                myAjax('post', url + "/index/wx/register_wx_account",par, function (res) {
+                    if(res.code==200){
+                        layer.msg("绑定成功!");
+                        setCookie("token", res.data.token, 1);
+                        setCookie("mobile", res.data.mobile, 1);
+                        window.location.href='./index.html'
+                    }else{
+                          $("#bind-phone").hide();
+                          $("#register-bind-phone").show() 
+                    }
+
+                }, 'json')
+            })
+        $("#register-bind-code").click(function () {
+                var phone = $("#register-bind-phne").val()
+                if (!checkPhone(phone)) {
+                    return
+                }
+                var timeBackPwd = 60;
+                var bindCode = $("#register-bind-code")
+                bindCode.attr("disabled", true)// disabled = true
+                bindCode.css({ "background": "#ffffff", "color": "#FF9A2E" })
+                clearInterval(timeBackPwdSet)
+                
+                var timeBackPwdSet = setInterval(function () {
+                    if (timeBackPwd <= 0) {
+                        clearInterval(timeBackPwdSet)
+                        console.log("000")
+                        bindCode.attr("disabled", false);
+                        bindCode.css({ "background": "#404040", "color": "#ffffff" })
+                        bindCode.text("发送验证码")
+                        return
+                    }
+                    timeBackPwd--;
+                    bindCode.text("剩余" + timeBackPwd + "S")
+
+                }, 1000);
+                myAjax('post', url + "/index/user/send_sms", { "mobile": phone }, function (res) {
+                    layer.msg("发送成功!");
+
+                }, 'json')
+            });
+
+            // 绑定账号
+            $("#bind-code-code").click(function () {
+                var phone = $("#bind-phone-numb").val()
+                if (!checkPhone(phone)) {
+                    return
+                }
+                var timeBackPwd = 60;
+                var bindCode = $("#bind-code-code")
+                bindCode.attr("disabled", true)// disabled = true
+                bindCode.css({ "background": "#ffffff", "color": "#FF9A2E" })
+              
+                clearInterval(timeBackPwdSet)
+                var timeBackPwdSet = setInterval(function () {
+                    if (timeBackPwd <= 0) {
+                        clearInterval(timeBackPwdSet)
+                        console.log("000")
+                        bindCode.attr("disabled", false);
+                        bindCode.css({ "background": "#404040", "color": "#ffffff" })
+                        bindCode.text("发送验证码")
+                        return
+                    }
+                    timeBackPwd--;
+                    bindCode.text("剩余" + timeBackPwd + "S")
+
+                }, 1000)
+                myAjax('post', url + "/index/user/send_sms", { "mobile": phone }, function (res) {
+                    layer.msg("发送成功!");
+
+                }, 'json')
+            });
+            // 注册
+            $("#register-code").click(function () {
+                var phone = $("#register-phne").val()
+                if (!checkPhone(phone)) {
+                    return
+                }
+                var timeBackPwd = 60;
+                $(this).attr("disabled", true)// disabled = true
+                $(this).css({ "background": "#ffffff", "color": "#FF9A2E" })
+                clearInterval(timeBackPwdSet)
+                var timeBackPwdSet = setInterval(() => {
+                    timeBackPwd--;
+                    if (timeBackPwd <= 0) {
+                        $("#register-code").text("发送验证码")
+                        clearInterval(timeBackPwdSet)
+                        $("#register-code").attr("disabled", false);
+                        $("#register-code").css({ "background": "#404040", "color": "#ffffff" })
+                        return
+                    }
+
+                    $(this).text("剩余" + timeBackPwd + "S")
+                }, 1000)
+                myAjax('post', url + "/index/user/send_sms", { "mobile": phone }, function (res) {
+                    layer.msg("发送成功!");
+
+                }, 'json')
+                // var timeBackPwdSet = setInterval(function(){
+                //     if(timeBackPwd<=0){
+                //         clearInterval(timeBackPwdSet)
+                //         console.log($(this))
+                //         $("#register-code").attr("disabled",false)
+                //     }
+                //     timeBackPwd--;
+                //     $(this).text("剩余"+timeBackPwd+"S")
+
+                // },10)
+
+            })
+            // 获取验证码
+
+            // 注册按钮
+            $("#go-to-login-welcome-bt").click(function () {
+                var phone = $("#register-phne").val();   //手机
+                var register_code = $("#register-code-num").val()//注册验证码
+                var register_pwd_again = $("#register-pwd-again").val()
+                var register_pwd = $("#register-pwd").val()
+                if (!checkPhone(phone) || phone == "") {
+                    $("#register-phne").focus()
+                    return
+                }
+                if (register_code == "") {
+                    layer.msg("验证码不能为空!");
+                    return
+                }
+                if (register_pwd == "") {
+                    layer.msg("密码不能为空!");
+                    return
+                }
+                if (register_pwd_again == "") {
+                    layer.msg("密码再次不能为空!");
+                    return
+                }
+                if (!(register_pwd_again === register_pwd)){
+                    layer.msg("两次输入的密码不同!");
+                    return
+
+                }
+                var data = {}
+                data.mobile = phone
+                data.password = register_pwd
+                data.repassword = register_pwd_again
+                data.captcha = register_code
+
+                myAjax("post", url + "/index/user/register", data, function (res) {
+                    if (res.code == 200) {
+
+                        $("#register").hide()
+                        $("#welcome").show()
+                    } else {
+                        // layer.msg("注册失败重新注册!");
+                    }
+
+
+                }, 'json')
+
+            })
+            // 密码登录
+            $("#login-bt").click(function () {
+                var login_hone = $("#login-phone").val()
+                var login_pwd = $("#login-pwd").val()
+                if (!checkPhone(login_hone) || login_hone == "") {
+                    $("#register-phne").focus()
+                    return
+                }
+                if (login_pwd == "") {
+                    layer.msg("密码不能为空!");
+                    return
+                }
+                myAjax('post', url + '/index/user/login', { "mobile": login_hone, "password": login_pwd }, function (res) {
+                    console.log(res);
+                    if (res.code == 200) {
+                        layer.msg("登录成功");
+                        window.location.href = "./index.html"
+                        setCookie("token", res.data.token, 1)
+                        setCookie("mobile", res.data.mobile, 1)
+                        setCookie("unBound", res.data.lock_wechat, 1)
+                        window.location.href = "./index.html"
+                    } else {
+                        layer.msg(res.msg);
+                    }
+
+
+                }, 'json');
+
+            })
+            // 手机验证
+            function checkPhone(phone) {
+                if (!(/^1[3456789]\d{9}$/.test(phone))) {
+                    layer.msg("请输入正确的手机号");
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

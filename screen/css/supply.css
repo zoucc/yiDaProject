@@ -1,0 +1,187 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+html {
+	width: 100%;
+	height: 100%;
+}
+body{
+	width: 100%;
+	height: 100%;
+	padding: 0 20px;
+	box-sizing: border-box;
+    background: url('../images/supply/bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+.main-body {
+	display: flex;
+	margin-top: 30px;
+}
+.head-img img {
+	width: 100%;
+}
+.main-left {
+	 flex: 2.16;
+}
+.main-left img {
+	 display: block;
+	 width: 100%;
+}
+.main-right {
+	flex: 7;
+	margin-left: 10px;
+}
+.main-right  .ranking-list{
+	height: 110px;
+	padding: 28px 0 0 25px;
+	box-sizing: border-box;
+	background: url(../images/supply/ranking.png) no-repeat;
+	background-size: 100% 100%;
+}
+.main-right  .ranking-list .group {
+	display: flex;
+	align-items: center;
+}
+.main-right  .ranking-list .group .pic {
+	width: 186px;
+	height: 70px;
+	margin-left: 10px;
+}
+.main-right  .ranking-list .group .pic:first-child {
+	margin-left: 0;
+}
+.main-right  .ranking-list .group .gys-list {
+	margin-left: 30px;
+	color: #00EAFF;
+}
+.main-right  .ranking-list .group .gys{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 15px;
+}
+.main-right  .ranking-list .group .gys:last-child{
+	margin-bottom: 0;
+}
+.main-right  .ranking-list .group .gys .icon {
+	width: 100px;
+	height: 25px;
+}
+.main-right  .ranking-list .group .gys .numb {
+	     display: flex;
+		 justify-content: center;
+		 align-items: center;
+	     margin-right: 5px;
+		 margin-left: 20px;
+		 width: 120px;
+	     background: linear-gradient(#00EAFF, #00EAFF) left top, linear-gradient(#00EAFF, #00EAFF) left top, linear-gradient(#00EAFF, #00EAFF) right top, linear-gradient(#00EAFF, #00EAFF) right top, linear-gradient(#00EAFF, #00EAFF) left bottom, linear-gradient(#00EAFF, #00EAFF) left bottom, linear-gradient(#00EAFF, #00EAFF) right bottom, linear-gradient(#00EAFF, #00EAFF) right bottom;
+	     background-repeat: no-repeat;
+	     background-size: 5px 1px, 1px 5px;
+	     padding: 0 10px;
+		 
+}
+.main-right .group .gys .numb .mt {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background:rgba(22,214,255,.08);
+	color: #FFDB5C;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.main-right .goods-list  {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 3px;
+}
+.main-right .goods-list .img-bg {
+	flex-basis: 49.5%;
+	width: 49.5%;
+	height: 240px;
+	margin-bottom: 10px;
+	color: #FFFFFF;
+	background: url(../images/supply/supply-bg.png) no-repeat;
+	background-size: 100% 100%;
+}
+.main-right .goods-list .img-bg h4 {
+	padding:10px 0 0 42px;
+	color: #65C6E7;
+	font-size: 16px;
+}
+.main-right .goods-list .img-bg .date {
+	padding-left: 42px;
+	color: #FFFFFF;
+	font-size: 10px;
+}
+.main-right .goods-list img {
+	flex-basis: 49.5%;
+	width: 49.5%;
+	height: 240px;
+	margin-bottom: 10px;
+	/* margin-left: 5px; */
+}
+.main-right .goods-list .ml {
+	margin-left: 6px;
+}
+.main-right .goods-list table {
+	    border-collapse: collapse;
+	    border-spacing: 0;
+		width: calc(100% - 24px);
+		margin:  15px auto 0;
+		font-size: 12px;
+		vertical-align: middle;
+		text-align: center;
+		border:1px solid rgba(52,134,218,1);
+}
+.main-right .goods-list .top {
+	 width: 100%;
+	 padding: 0 4px;
+	 box-sizing: border-box;
+	 color: #3488DB;
+	 height: 26px;
+	 /* font-weight:bold; */
+	 border-bottom:1px solid rgba(52,134,218,1);
+	 background: rgba(52,134,218,.2);
+}
+.main-right .goods-list tr td {
+	padding-bottom: 12px;
+}
+.main-right .goods-list tr:nth-of-type(2) td {
+	padding: 12px 0;
+}
+
+/*  移动 */
+#pltom1,#pltom2{
+	width: 100%;
+}
+.mt-number-animate {
+    line-height: 24px;
+    height: 24px;
+    font-size: 24px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+	width: 100%;
+	padding: 1px 0;
+	padding-left: 10px;
+	box-sizing: border-box;
+    background:rgba(22,214,255,0.08);
+    color: #FFDB5C;
+}
+
+ .mt-number-animate .mt-number-animate-dot {
+    width: 14px;
+    line-height: 24px;
+    float: left;
+    text-align: center;
+}
+
+.mt-number-animate .mt-number-animate-dom {
+    width: 14px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 0;
+	
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-body">
+    <div class="from-main">
+        <div class="from-box">
+            <div class="from-cont">
+                <div class="info-img"><img class="protect" src="./images/change_pwd.png" alt=""></div>
+                <!-- 密码找回 -->
+                <div class="change-pwd info" id="change-pwd" >
+                    <h1>修改密码</h1>
+                    <ul>
+                        <li>
+                           <span>旧密码</span> <div> <input id="old-pwd" type="text" placeholder="请输入密码"></div>
+                        </li>
+                        <li>
+                            <span>新密码</span> <div><input id="pwd" type="text" placeholder="请输入新密码"></div>
+                        </li>
+                        <li>
+                          <span>确认密码</span>  <div><input id="new-pwd" type="text" placeholder="请再次输入您的新密码"></div>
+                        </li>
+                        <li><button id="sure-login">确认修改</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/layer.js"></script>
+    <script src="./js/utils.js"></script>
+    <script>
+      var url = api_url
+        $(function(){
+
+
+       $("#sure-login").click(function(){
+           var oldPwd = $("#old-pwd").val();
+           var pwd = $("#pwd").val();
+           var newPwd = $("#new-pwd").val();
+           if(oldPwd==""){
+            layer.msg("旧密码不能为空!");  
+                return
+           }
+           if(pwd==""){
+            layer.msg("新密码不能为空!");  
+                return
+           }
+           if(newPwd==""){
+            layer.msg("确认密码不能为空!");  
+                return
+           }
+           if(!(newPwd===pwd)){
+            layer.msg("两次输入的密码不相等!");  
+                return
+           }
+           var data = {}
+                data.oldpassword = oldPwd
+                data.newpassword = pwd
+                data.renewpassword  = newPwd
+                data.token  = getCookie("token")
+
+                myAjax("post",url+"/index/user/changepwd",data,function(res){
+                    if(res.code==200){
+                        layer.msg("修改密码成功!"); 
+                        window.location.href ="./login.html" 
+                      
+                    }else{
+                        // layer.msg("修改密码失败!");  
+                    }
+
+                
+                },'json')
+
+
+       })
+       function checkPhone(phone){ 
+                    if(!(/^1[3456789]\d{9}$/.test(phone))){ 
+                        layer.msg("手机号码有误，请重填");  
+                        return false; 
+                    } else{
+                        return true; 
+                    }
+                }
+
+
+        })
+
+
+    </script>
+
+</body>
+
+</html>

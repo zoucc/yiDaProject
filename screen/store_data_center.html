@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微世创智能运营管理平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/store_data_center.css">
+</head>
+
+<body>
+    <div class="main-body">
+        <div class="head-img"><img src="./images/storeInfo/top.png" alt=""></div>
+        <div class="cont-box">
+            <section class="left-box">
+                <div>
+                    <img src="./images/storeInfo/left.png" alt="">
+                </div>
+            </section>
+
+            <!-- 中级 -->
+            <section class="center-box" >
+                <div class="head-border">
+                    <div class="head-line-box" style="border-bottom: 3px solid rgba(87, 199, 237, 0.5);">
+                        <div class="head-line-1">
+                            <p>
+                                <div class="numberRun1 " id="pltom1"></div>
+                            </p>
+                            <p class="name">线下门店数</p>
+                        </div>
+                        <div class="head-line-1">
+                            <p>
+                                <div class="numberRun2 " id="pltom1"></div>
+                            </p>
+                            <p class="name">会员数</p>
+                        </div>
+                        <div class="head-line-1">
+                            <p>
+                                <div class="numberRun3 " id="pltom1"></div>
+                            </p>
+                            <p class="name">总订单量</p>
+                        </div>
+                        <div class="head-line-1">
+                            <p>
+                                <div class="numberRun4 " id="pltom1"></div>
+                            </p>
+                            <p class="name">总销售额</p>
+                        </div>
+                    </div>
+                    <div class="head-line-box">
+                        <div class="head-line-2">
+                            <p><span>26</span></p>
+                            <p>上月新增</p>
+                        </div>
+                        <div class="head-line-2">
+                            <p><span>456</span></p>
+                            <p>上月新增</p>
+                        </div>
+                        <div class="head-line-2">
+                            <p><span>100,518</span></p>
+                            <p>上月新增</p>
+                        </div>
+                        <div class="head-line-2">
+                            <p><span>20,824,169</span></p>
+                            <p>上月新增</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="con-iofo">
+                    <div class="con-iofo-in">
+                        <div class="border-box-s">
+                            <div class="tip"><img src="./images//storeInfo/shuju.png" alt=""><span>宝药林数据统计</span></div>
+                            <div class="flex-box"><span>门店数</span><span>
+                                    <div class="numberRun5 " id="pltom2"></div>
+                            </div>
+                            <div class="flex-box"><span>会员数</span>
+                                <div class="numberRun6 " id="pltom2"></div>
+                            </div>
+                            <div class="flex-box"><span>订单量</span>
+                                <div class="numberRun7 " id="pltom2"></div>
+                            </div>
+                            <div class="flex-box"><span>销售额</span>
+                                <div class="numberRun8 " id="pltom2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="con-iofo-in">
+                        <div class="border-box-s">
+                            <div class="tip"><img src="./images//storeInfo/shuju.png" alt=""><span>金汤数据统计</span></div>
+                            <div class="flex-box"><span>门店数</span><span>
+                                    <div class="numberRun9 " id="pltom2"></div>
+                            </div>
+                            <div class="flex-box"><span>会员数</span>
+                                <div class="numberRun10 " id="pltom2"></div>
+                            </div>
+                            <div class="flex-box"><span>订单量</span>
+                                <div class="numberRun11 " id="pltom2"></div>
+                            </div>
+                            <div class="flex-box"><span>销售额</span>
+                                <div class="numberRun12 " id="pltom2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="con-iofo-in">
+                        <div class="border-box-s">
+                            <div class="tip"><img src="./images//storeInfo/shuju.png" alt=""><span>母婴数据统计</span></div>
+                            <div class="flex-box"><span>门店数</span><span>
+                                    <div class="numberRun13 " id="pltom2"></div>
+                            </div>
+                            <div class="flex-box"><span>会员数</span>
+                                <div class="numberRun14 " id="pltom2"></div>
+                            </div>
+                            <div class="flex-box"><span>订单量</span>
+                                <div class="numberRun15 " id="pltom2"></div>
+                            </div>
+                            <div class="flex-box"><span>销售额</span>
+                                <div class="numberRun16 " id="pltom2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+               <!-- 动态显示数据 -->
+                <div class="cnter-bt-img" style="-webkit-backface-visibility: hidden;
+                backface-visibility: hidden;">
+                    <!-- <img src="./images/storeInfo/mid.png" alt=""> -->
+                    <div class="border-line" >
+                        <div id="hyf-Buy" style="width: 680px;height: 200px;margin: auto;"></div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="right-box">
+                <div>
+                    <img src="./images/storeInfo/right.png" alt="">
+                    <div class="border-line zxt-id" >
+                        <div id="zxt-id" style="height: 200px;width: 100%;"></div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/number.js"></script>
+    <script src="js/echarts.js""></script>
+    <script src="js/store_data_center.js"></script>
+
+    <script>
+        var myChart = echarts.init(document.getElementById('hyf-Buy'));
+        myChart.setOption(hYFBuy());
+
+        var myChart2 = echarts.init(document.getElementById('zxt-id'));
+        myChart2.setOption(mouthmoney());
+
+        $(function () {
+     
+            //初始化
+            var numRun1 = $(".numberRun1").numberAnimate({
+                num: '309',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun2 = $(".numberRun2").numberAnimate({
+                num: '124218',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun3 = $(".numberRun3").numberAnimate({
+                num: 245673,
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun4 = $(".numberRun4").numberAnimate({
+                num: '45907128',
+                speed: 2000,
+                symbol: ","
+            });
+
+            // -----------------------------------------------------------
+            var numRun5 = $(".numberRun5").numberAnimate({
+                num: '82',
+                speed: 2000,
+                symbol: ","
+            });
+
+            var numRun6 = $(".numberRun6").numberAnimate({
+                num: '32882',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun7 = $(".numberRun7").numberAnimate({
+                num: '50201',
+                speed: 2000,
+                symbol: ","
+            });
+
+            var numRun8 = $(".numberRun8").numberAnimate({
+                num: '10458610',
+                speed: 2000,
+                symbol: ","
+            });
+
+            var numRun9 = $(".numberRun9").numberAnimate({
+                num: '80',
+                speed: 2000,
+                symbol: ","
+            });
+
+
+            var numRun10 = $(".numberRun10").numberAnimate({
+                num: '354',
+                speed: 2000,
+                symbol: ","
+            });
+
+
+            var numRun11 = $(".numberRun11").numberAnimate({
+                num: '105452',
+                speed: 2000,
+                symbol: ","
+            });
+
+
+            var numRun12 = $(".numberRun12").numberAnimate({
+                num: '8752735',
+                speed: 2000,  
+                symbol: ","
+            });
+
+
+            var numRun13 = $(".numberRun13").numberAnimate({
+                num: '147',
+                speed: 2000,
+                symbol: ","
+            });
+
+
+            var numRun14= $(".numberRun14").numberAnimate({
+                num: '60465',
+                speed: 2000,
+                symbol: ","
+            });
+
+            var numRun15 = $(".numberRun15").numberAnimate({
+                num: '90020',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun16 = $(".numberRun16").numberAnimate({
+                num: '10458610',
+                speed: 2000,
+                symbol: ","
+            });
+
+
+
+
+
+
+
+
+
+            var nums1 = 1000000;
+            // setInterval(function () {
+            //     nums1 += Math.floor(Math.random() * 10);
+            //     numRun1.resetData(nums1);
+            // }, 3000);
+            var nums2 = 124218;
+            setInterval(function () {
+                nums2 += 1;
+                numRun2.resetData(nums2);
+            }, 200000);
+            var nums3 = 245673;
+            setInterval(function () {
+                nums3 += Math.floor(Math.random() * (3-1+1)+1);
+                numRun3.resetData(nums3);
+            }, 3500);
+            var nums4 = 45907128;
+            setInterval(function () {
+                nums4 +=  Math.floor(Math.random() * (600-200+1)+200);
+                numRun4.resetData(nums4);
+            }, 3500);
+            // var nums5 = 42.21;
+            // setInterval(function () {
+            //     nums5 += 2.55;
+            //     numRun5.resetData(nums5);
+            // }, 2500);
+            var nums6 = 32882;
+            setInterval(function () {
+                nums6 += 1;
+                numRun6.resetData(nums6);
+            }, 200000);
+            var nums7 = 50201;
+            setInterval(function () {
+                nums7 +=Math.floor(Math.random()*(3-1+1)+1);
+                numRun7.resetData(nums7);
+            }, 3000);
+            var nums8 = 10458610;
+            setInterval(function () {
+                nums8 += Math.floor(Math.random()*(500-100+1)+100);
+                numRun8.resetData(nums8);
+            }, 3000);
+
+            // var nums9 = 568458;
+            // setInterval(function () {
+            //     nums9 += 1;
+            //     numRun6.resetData(nums9);
+            // }, 1000);
+
+            var nums10 = 30871;
+            setInterval(function () {
+                nums10 += 1;
+                numRun10.resetData(nums10);
+            }, 210000);
+            var nums11 = 105452;
+            setInterval(function () {
+                nums11 += Math.floor(Math.random()*(3-1+1)+1);
+                numRun11.resetData(nums11);
+            }, 4000);
+
+            var nums12 = 13180900;
+            setInterval(function () {
+                nums12 +=  Math.floor(Math.random()*(500-100+1)+100);
+                numRun12.resetData(nums12);
+            }, 4000);
+            // var nums13 = 1;
+            // setInterval(function () {
+            //     nums13 += 1;
+            //     numRun13.resetData(nums13);
+            // }, 1000);
+            var nums14 = 60465;
+            setInterval(function () {
+                nums14 += 1;
+                numRun14.resetData(nums14);
+            }, 22000);
+
+            var nums15 = 90020;
+            setInterval(function () {
+                nums15 += Math.floor(Math.random()*(3-1+1)+1);
+                numRun15.resetData(nums15);
+            }, 6000);
+
+            var nums16 = 10458610;
+            setInterval(function () {
+                nums16 +=  Math.floor(Math.random()*(500-100+1)+100);
+                numRun16.resetData(nums16);
+            }, 6000);
+
+        })
+    </script>
+
+</body>
+
+</html>

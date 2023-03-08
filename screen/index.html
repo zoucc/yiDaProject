@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微世创智能运营管理平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="main-body">
+        <div class="head-img"><img src="./images/head.png" alt=""></div>
+        <div class="cont-box">
+            <section class="left-box">
+                <div class="numb-box">
+                    <div class="up-numb" style="margin-bottom: 10px;">
+                        <div class="numb-img"><img src="./images/pay_num.png" alt=""></div>
+                        <div class="numb">
+                            <div class="numberRun1 " id="pltom1"></div>
+                        </div>
+                    </div>
+                    <div class="up-numb">
+                        <div class="numb-img"><img src="./images/persion_numb.png" alt=""></div>
+                        <div class="numb">
+                            <div class="numberRun2 " id="pltom1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box img-box-1">
+                    <!-- <img src="./images/left_zhi.png" alt=""> -->
+                    <div style="color:#00EAFF;font-size: 11px;padding: 6px 0 0 25px;">GMV近7天变化趋势</div>
+                    <p id=""></p>
+                    <div id="left_zhi"></div>
+                </div>
+                <div class="img-box img-box-2">
+                        <div style="color:#00EAFF;font-size: 11px;padding: 6px 0 0 25px;"> 过去7天各端GMV贡献占比</div>
+                        <p id="time-pie" style="color:#ffffff;font-size: 6px;padding: 20px 0 0 25px;"></p>
+                        <div id="pie"></div>
+                   
+                    <!-- <img src="./images/left_pie_img.png" alt=""> -->
+                </div>
+            </section>
+
+            <!-- 中级 -->
+            <section class="center-box">
+                <div class="center-box-head">
+                    <div class="data-1 1">
+                        <div class="j-ao j-ao-1">
+                            <div class="j-ao-in  ">
+                                <p class="j-ao-head"><span>线下门店数据统计</span></p>
+                                <div class="flex-class">
+                                    <div class="aa">
+                                        <p class="name-s">线下门店数</p>
+                                        <div class="numberRun7 number-class" id="pltom12"></div>
+                                    </div>
+                                    <div class="aa1"><span>上月新增</span><span>26</span></div>
+                                </div>
+                                <div class="flex-class">
+                                    <div class="aa">
+                                        <p class="name-s">用户人数</p>
+                                        <div class="numberRun8 number-class" id="pltom12"></div>
+                                    </div>
+                                    <div class="aa1"><span>上月新增</span><span>456</span></div>
+                                </div>
+                                <div class="flex-class">
+                                    <div class="aa">
+                                        <p class="name-s">订单总数</p>
+                                        <div class="numberRun9 number-class" id="pltom12"></div>
+                                    </div>
+                                    <div class="aa1"><span>上月新增</span><span>100,518</span></div>
+                                </div>
+                                <div class="flex-class">
+                                    <div class="aa">
+                                        <p class="name-s">销售额</p>
+                                        <div class="numberRun10 number-class" id="pltom12"></div>
+                                    </div>
+                                    <div class="aa1"><span>上月新增</span><span>
+                                            20,824,169
+                                        </span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-1 2">
+                            <div class="j-ao j-ao-2">
+                                <div class="j-ao-in  ">
+                                    <p class="j-ao-head"><span>社群电商数据统计</span></p>
+                                    <div class="flex-class">
+                                        <div class="aa">
+                                            <p class="name-s">用户人数</p>
+                                            <div class="numberRun11 number-class" id="pltom12"></div>
+                                        </div>
+                                        <div class="aa1"><span>上月新增</span><span>
+                                                5,937
+                                            </span></div>
+                                    </div>
+                                    <div class="flex-class">
+                                        <div class="aa">
+                                            <p class="name-s">代理商人数</p>
+                                            <div class="numberRun12 number-class" id="pltom12"></div>
+                                        </div>
+                                        <div class="aa1"><span>上月新增</span><span>
+                                                1,238
+                                            </span></div>
+                                    </div>
+                                    <div class="flex-class">
+                                        <div class="aa">
+                                            <p class="name-s">订单总数</p>
+                                            <div class="numberRun13 number-class" id="pltom12"></div>
+                                        </div>
+                                        <div class="aa1"><span>上月新增</span><span>
+                                                871,527
+                                            </span></div>
+                                    </div>
+                                    <div class="flex-class">
+                                        <div class="aa">
+                                            <p class="name-s">销售额</p>
+                                            <div class="numberRun14 number-class" id="pltom12"></div>
+                                        </div>
+                                        <div class="aa1"><span>上月新增</span><span>
+                                                81,201,425
+                                            </span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-1 3">
+                                <div class="j-ao j-ao-1">
+                                    <div class="j-ao-in ">
+                                        <p class="j-ao-head"><span>企业福利购数据统计</span></p>
+                                        <div class="flex-class">
+                                            <div class="aa">
+                                                <p class="name-s">合作伙伴</p>
+                                                <div class="numberRun15 number-class" id="pltom12"></div>
+                                            </div>
+                                            <div class="aa1"><span>上月新增</span><span>3</span></div>
+                                        </div>
+                                        <div class="flex-class">
+                                            <div class="aa">
+                                                <p class="name-s">用户人数</p>
+                                                <div class="numberRun16 number-class" id="pltom12"></div>
+                                            </div>
+                                            <div class="aa1"><span>上月新增</span><span>451</span></div>
+                                        </div>
+                                        <div class="flex-class">
+                                            <div class="aa">
+                                                <p class="name-s">订单总数</p>
+                                                <div class="numberRun17 number-class" id="pltom12"></div>
+                                            </div>
+                                            <div class="aa1"><span>上月新增</span><span>
+                                                    51,309
+                                                </span></div>
+                                        </div>
+                                        <div class="flex-class">
+                                            <div class="aa">
+                                                <p class="name-s">销售额</p>
+                                                <div class="numberRun18 number-class" id="pltom12"></div>
+                                            </div>
+                                            <div class="aa1"><span>上月新增</span><span>
+                                                    20,523,951
+                                                </span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="data-1 4">
+                        <div class="j-ao j-ao-2">
+                            <div class="j-ao-in">
+                                <p class="j-ao-head" style="margin-bottom: 32px"><span>供应链数据统计</span></p>
+                                <div class="flex-class">
+                                        <div class="aa">
+                                            <p class="name-s">供应商</p>
+                                            <div class="numberRun19 number-class" id="pltom12"></div>
+                                        </div>
+                                        <div class="aa1"><span>上月新增</span><span>
+                                                869
+                                            </span></div>
+                                    </div>
+                                    <div class="flex-class">
+                                        <div class="aa">
+                                            <p class="name-s">商品数</p>
+                                            <div class="numberRun20 number-class" id="pltom12"></div>
+                                        </div>
+                                        <div class="aa1"><span>上月新增</span><span>
+                                                18,249
+                                            </span></div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="center-cont">
+                    <img src="./images/center_cont.png" alt="">
+                    <div class="center-cont-data">
+                        <div class="center-cont-data-in">
+                            <div class="cont-data-info">
+                                <p class="data1"><span>GMV</span><span>/////</span></p>
+                                <p class="data2"><span>2019/12/24</span></p>
+                                <p class="data3"><span>今日</span></p>
+                                <p class="data4"><span>
+                                        <div class="numberRun3" id="pltom3"></div>
+                                    </span></p>
+                                <p class="data5"><span>环比</span><span>↓4.9%</span><span>同比</span><span>↑94.9%</span>
+                                </p>
+                            </div>
+                            <div class="cont-data-info">
+                                <p class="data1"><span>订单量</span><span>/////</span></p>
+                                <p class="data2"><span>2019/12/24</span></p>
+                                <p class="data3"><span>今日</span></p>
+                                <p class="data4">
+                                    <div class="numberRun4" id="pltom4"></div>
+                                </p>
+                                <p class="data5"><span>环比</span><span>↓4.9%</span><span>同比</span><span>↑94.9%</span>
+                                </p>
+                            </div>
+                            <div class="cont-data-info">
+                                <p class="data1"><span>下单人数</span><span>/////</span></p>
+                                <p class="data2"><span>2019/12/24</span></p>
+                                <p class="data3"><span>今日</span></p>
+                                <p class="data4">
+                                    <div class="numberRun5" id="pltom5"></div>
+                                </p>
+                                <p class="data5"><span>环比</span><span>↓4.9%</span><span>同比</span><span>↑94.9%</span>
+                                </p>
+                            </div>
+                            <div class="cont-data-info">
+                                <p class="data1"><span>客单价</span><span>/////</span></p>
+                                <p class="data2"><span>2019/12/24</span></p>
+                                <p class="data3"><span>今日</span></p>
+                                <p class="data4">
+                                    <div class="numberRun6" id="pltom6"></div>
+                                </p>
+                                <p class="data5"><span>环比</span><span>↓4.9%</span><span>同比</span><span>↑94.9%</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="zhe2"></div>
+                </div>
+                
+            </section>
+            <section class="right-box">
+                <div class="dd-mian">
+                    <img src="./images/right_img.png" alt="">
+                    <p class="dd-box dd-1"></p>
+                    <p class="dd-box dd-2"></p>
+                    <p class="dd-box dd-3"></p>
+                    <p class="dd-box dd-4"></p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/number.js"></script>
+    <script src="js/echarts.js"></script>
+    <script src="js/indexEch.js"></script>
+
+    <script>
+        $(function () {
+
+        //     var myChart = echarts.init(document.getElementById('hyf-Buy'));
+        //   myChart.setOption(hYFBuy());
+
+        // var myChart2 = echarts.init(document.getElementById('zxt-id'));
+        // myChart2.setOption(mouthmoney());
+            function getNowFormatDate() {
+                var date = new Date();
+                var seperator1 = "/";
+                var year = date.getFullYear();
+                var month = date.getMonth() + 1;
+                var strDate = date.getDate();
+                if (month >= 1 && month <= 9) {
+                    month = "0" + month;
+                }
+                if (strDate >= 0 && strDate <= 9) {
+                    strDate = "0" + strDate;
+                }
+                var currentdate = year + seperator1 + month + seperator1 + strDate;
+                return currentdate;
+            }
+            function fun_date(num) { 
+                var date1 = new Date();
+                //今天时间
+                var time1 = date1.getFullYear() + "-" + (date1.getMonth() + 1) + "-" + date1.getDate()
+                console.log(time1);
+                var date2 = new Date(date1);
+                date2.setDate(date1.getDate() + num);
+                //num是正数表示之后的时间，num负数表示之前的时间，0表示今天
+                var time2 = date2.getFullYear() + "-" + (date2.getMonth() + 1) + "-" + date2.getDate(); 
+                console.log(time2);
+                return time2;
+                }
+             
+            $(".data2").children().html(getNowFormatDate())
+
+            var myChart = echarts.init(document.getElementById('left_zhi'));
+                myChart.setOption(leftZhi());
+             
+                
+                var myChart2 = echarts.init(document.getElementById('pie'));
+                myChart2.setOption(pie2());
+                var dateArr2 = afterDateArr(7,true)
+                $("#time-pie").html(dateArr2[0]+'-'+dateArr2[dateArr2.length-1]+"|今日")
+                $(".dd-box").html(dateArr2[0]+'-'+dateArr2[dateArr2.length-1]+"|今日")
+                var myChart3 = echarts.init(document.getElementById('zhe2'));
+                myChart3.setOption(leftZhi2());
+
+                myChart3.dispatchAction({type: 'highlight',seriesIndex: 0,dataIndex:10});
+
+            //初始化
+            var numRun1 = $(".numberRun1").numberAnimate({
+                num: '288840004',
+                speed: 2000,
+                symbol: ","
+
+            });
+            var numRun2 = $(".numberRun2").numberAnimate({
+                num: '178237',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun3 = $(".numberRun3").numberAnimate({
+                num: 412.22,
+                dot: 2,
+                speed: 2000,
+                // symbol: ","
+            });
+            var numRun4 = $(".numberRun4").numberAnimate({
+                num: '177683',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun5 = $(".numberRun5").numberAnimate({
+                num: '19352',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun6 = $(".numberRun6").numberAnimate({
+                num: '232',
+                speed: 2000,
+                symbol: ","
+            });
+            // ----------------------------------------------------------
+            var numRun7 = $(".numberRun7").numberAnimate({
+                num: '309',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun8 = $(".numberRun8").numberAnimate({
+                num: '124218',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun9 = $(".numberRun9").numberAnimate({
+                num: '245673',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun10 = $(".numberRun10").numberAnimate({
+                num: '45907128',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun11 = $(".numberRun11").numberAnimate({
+                num: '36916',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun12 = $(".numberRun12").numberAnimate({
+                num: '16193',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun13 = $(".numberRun13").numberAnimate({
+                num: '2346719',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun14 = $(".numberRun14").numberAnimate({
+                num: '196603809',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun15 = $(".numberRun15").numberAnimate({
+                num: '36',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun16 = $(".numberRun16").numberAnimate({
+                num: '17103',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun17 = $(".numberRun17").numberAnimate({
+                num: '123849',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun18 = $(".numberRun18").numberAnimate({
+                num: '49599548',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun19 = $(".numberRun19").numberAnimate({
+                num: '10568',
+                speed: 2000,
+                symbol: ","
+            });
+            var numRun20 = $(".numberRun20").numberAnimate({
+                num: '215864',
+                speed: 2000,
+                symbol: ","
+            });
+         
+
+
+
+
+            var nums1 = 288840004;
+            setInterval(function () {
+                nums1 += Math.floor(Math.random() * (400-100+1)+100);
+                numRun1.resetData(nums1);
+            }, 3000);
+            var nums2 = 178237;
+            setInterval(function () {
+                nums2 += Math.floor(Math.random() * (2-1+1)+1);
+                numRun2.resetData(nums2);
+            }, Math.floor(Math.random() * (30000-20000+1)+20000));
+            var nums3 = 412.22;
+            setInterval(function () {
+                nums3 += Math.floor(Math.random() *20) / 100;
+                numRun3.resetData(nums3);
+            }, 4000);
+            var nums4 = 177683;
+            setInterval(function () {
+                nums4 += Math.floor(Math.random() *(5-1+1)+1);
+                numRun4.resetData(nums4);
+            }, 4000);
+            var nums5 = 19352;
+            setInterval(function () {
+                nums5 += Math.floor(Math.random() *(2-1+1)+1);
+                numRun5.resetData(nums5);
+            }, 4000);
+            var nums6 = 232;
+
+            setInterval(function () {
+                nums6 =Math.floor(Math.random()*(250-220+1)+220);
+                numRun6.resetData(nums6);
+            }, 4000);
+            var nums7 = 309;
+            // setInterval(function () {
+            //     nums7 += 1;
+            //     numRun7.resetData(nums7);
+            // }, 7000);
+
+            var nums8 = 124218;
+            setInterval(function () {
+                nums8 += Math.floor((Math.random()*(3-1+1)+1));
+                numRun8.resetData(nums8);
+            },  Math.floor(Math.random() * (30000-20000+1)+20000));
+
+            var nums9 = 245673;
+            setInterval(function () {
+                nums9 += Math.floor((Math.random()*(5-1+1)+1));
+                numRun9.resetData(nums9);
+            }, 3000);
+            var nums10 = 45907128;
+            setInterval(function () {
+                nums10 += Math.floor((Math.random()*1000));
+                numRun10.resetData(nums10);
+            }, 3000);
+            var nums11 = 36916;
+            setInterval(function () {
+                nums11 += Math.floor((Math.random()*(5-1+1)+1));
+                numRun11.resetData(nums11);
+            },  Math.floor(Math.random() * (30000-20000+1)+20000));
+            var nums12 = 16193;
+            setInterval(function () {
+                nums12 += Math.floor((Math.random()*(2-1+1)+1));
+                numRun12.resetData(nums12);
+            }, 180000);
+            var nums13 = 2346719;
+            setInterval(function () {
+                nums13 += Math.floor((Math.random()*(10-1+1)+1));
+                numRun13.resetData(nums13);
+            }, 3000);
+            var nums14 = 196603809;
+             
+            setInterval(function () {
+                nums14 += Math.floor((Math.random()*(560-80+1)+80));
+                numRun14.resetData(nums14);
+            }, 3000);
+            var nums15 = 36;
+            // setInterval(function () {
+            //     nums15 += 1;
+            //     numRun15.resetData(nums15);
+            // }, 3000);
+            var nums16 = 17103;
+            setInterval(function () {
+                nums16 += Math.floor((Math.random()*(2-1+1)+1));
+                numRun16.resetData(nums16);
+            }, Math.floor(Math.random() * (30000-20000+1)+20000));
+            var nums17 = 123849;
+            setInterval(function () {
+                nums17 += Math.floor((Math.random()*(5-1+1)+1));
+                numRun17.resetData(nums17);
+            }, 4000);
+            var nums18 = 49599548;
+            setInterval(function () {
+                nums18 += Math.floor((Math.random()*(2000-400+1)+400));
+                numRun18.resetData(nums18);
+            }, 4000);
+            var nums19 = 10568;
+            setInterval(function () {
+                nums19 +=  Math.floor(Math.random()*(2-1+1)+1);
+                numRun19.resetData(nums19);
+            }, 300000);
+            var nums20 = 215864;
+            setInterval(function () {
+                nums20 += Math.floor(Math.random()*(2-1+1)+1);
+                numRun20.resetData(nums20);
+            }, 8000);
+
+      
+
+
+        })
+    </script>
+
+</body>
+
+</html>

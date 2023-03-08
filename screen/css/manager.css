@@ -1,0 +1,284 @@
+html,body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+html {
+	width: 100%;
+	height: 100%;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	padding: 40px 18px 34px 18px;
+	box-sizing: border-box;
+    background: url('../images/manager/bg.png') no-repeat;
+    background-size: cover;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+canvas {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.main-body {
+	display: flex;
+}
+.main-body img {
+	width: 100%;
+	display: block;
+	border: none;
+	margin-bottom: 15px;
+}
+.main-left {
+	flex: 5;
+	width: 0;
+	margin-right: 30px;
+	
+}
+.main-left .data-center {
+	width: 100%;
+	height: 392px;
+	background: url('../images/manager/top-left.png')no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: 15px;
+	padding: 16px 22px;
+	box-sizing: border-box;
+}
+.main-left .data-center h2 {
+	color: #FFFFFF;
+}
+.main-left .data-center .group-data {
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+}
+.main-left .data-center .group-data .group-item {
+	width: 220px;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.main-left .data-center .group-data .group-item.one {
+
+	background: url(../images/manager/1.png) no-repeat;
+	background-size: 100% 100%;
+}
+.main-left .data-center .group-data .group-item.two {
+
+	background: url(../images/manager/2.png) no-repeat;
+	background-size: 100% 100%;
+	margin: 0 20px;
+}
+.main-left .data-center .group-data .group-item.three {
+
+	background: url(../images/manager/3.png) no-repeat;
+	background-size: 100% 100%;
+	margin-right: 20px;
+}
+.main-left .group-data .group-item .total-num {
+	margin-top: 3px;
+	font-size: 32px;
+	color: #FFFFFF;
+}
+.main-left .group-data .group-item .total-text {
+	font-size: 16px;
+	color: #FFFFFF;
+}
+.main-left .group-data .group-item .total-end {
+	font-size: 8px;
+	color: #FDB628;
+}
+.statistic-area {
+	margin-top: 18px;
+	display: flex;
+	justify-content: center;
+}
+.statistic-area .statistic-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 180px;
+	margin-right: 15px;
+	background: url(../images/manager/4.png) no-repeat;
+	background-size: 100% 100%;
+}
+.statistic-area .statistic-item:last-child {
+	margin-right: 0;
+}
+.statistic-area .statistic-item .title {
+	color: #FFFFFF;
+}
+.statistic-area .statistic-item .line {
+	width:90px;
+	height:1px;
+	margin: 10px 0;
+	background:linear-gradient(90deg,rgba(0,190,255,1) 50%,rgba(0,190,255,0) 100%);
+}
+.statistic-area .statistic-item .total .total-item {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.statistic-area .statistic-item .total .total-item:last-child {
+	margin-bottom: 0;
+}
+.statistic-area .statistic-item .total .text {
+	width: 72px;
+	color: #00EAFF;
+	margin-right: 25px;
+}
+.statistic-area .statistic-item .total .con {
+	color: #FFDB5C;
+}
+.add-area {
+	display:  flex;
+	align-items: center;
+	width: 100%;
+	height: 260px;
+	font-size: 18px;
+	text-align: center;
+	color: #FFFFFF;
+	background: url(../images/manager/manager-bg-left.png) no-repeat;
+	background-size: 100% 100%;
+}
+.add-area .add-area-l {
+	width: 280px;
+	text-align: center;
+	flex-basis: 280px;
+}
+.add-area .add-area-l h5 {
+	padding-left: 100px;
+}
+.add-area .add-area-r {
+	flex: 1;
+	width: 100%;
+}
+
+.main-right {
+	flex: 3;
+	width: 100%;
+}
+.main-right .img-bg{
+	width: 100%;
+	height: 260px;
+	background: url(../images/manager/manager-bg-right.png) no-repeat;
+	background-size: 100% 100%;
+}
+.main-right .img-bg h5 {
+	color: #FFFFFF;
+	padding: 10px 0 0 26px;
+	font-size: 18px;
+}
+/* 移动范围样式 */
+#pltom1 .mt-number-animate {
+    line-height: 30px;
+    height:  30px;
+    font-size: 30px;
+    overflow: hidden;
+    position: relative;
+	top: 5px;
+	margin-bottom: 5px;
+}
+
+#pltom1 .mt-number-animate .mt-number-animate-dot {
+    width: 15px;
+    line-height: 30px;
+    float: left;
+    text-align: center;
+}
+
+#pltom1 .mt-number-animate .mt-number-animate-dom {
+    width: 15px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden
+}
+
+/*----*/
+#pltom2 .mt-number-animate {
+    line-height: 30px;
+    height:  30px;
+    font-size: 30px;
+    overflow: hidden;
+    position: relative;
+	top: 5px;
+	left: 6px;
+	margin-bottom: 5px;
+}
+
+#pltom2 .mt-number-animate .mt-number-animate-dot {
+    width: 15px;
+    line-height: 30px;
+    float: left;
+    text-align: center;
+}
+
+#pltom2 .mt-number-animate .mt-number-animate-dom {
+    width: 15px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden
+}
+/*----*/
+#pltom3 .mt-number-animate {
+    line-height: 30px;
+    height:  30px;
+    font-size: 26px;
+    overflow: hidden;
+    position: relative;
+	top: 8px;
+	left: 6px;
+	margin-bottom: 5px;
+}
+
+#pltom3 .mt-number-animate .mt-number-animate-dot {
+    width: 13px;
+    line-height: 30px;
+    float: left;
+    text-align: center;
+}
+
+#pltom3 .mt-number-animate .mt-number-animate-dom {
+    width: 13px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden
+}
+/*----*/
+#pltom4 .mt-number-animate {
+    line-height: 30px;
+    height:  30px;
+    font-size: 14px;
+    overflow: hidden;
+    position: relative;
+}
+
+#pltom4 .mt-number-animate .mt-number-animate-dot {
+    width: 8px;
+    line-height: 24px;
+    float: left;
+    text-align: center;
+}
+
+#pltom4 .mt-number-animate .mt-number-animate-dom {
+    width: 8px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden
+}

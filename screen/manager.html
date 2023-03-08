@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>社群电商数据中心 </title>
+		<link rel="stylesheet" href="css/manager.css">
+	</head>
+	<body>
+		<div class="main-body">
+			<div class="main-left">
+				<div class="data-center">
+					<h2>社群电商数据中心</h2>
+					<div class="group-data">
+						<div class="group-item one">
+							<div class="total-num">
+								<div class="numberRun1" id="pltom1"></div>
+							</div>
+							<div class="total-text">用户人数</div>
+							<div class="total-end">上月新增：5,937</div>
+						</div>
+						<div class="group-item two">
+							<div class="total-num">
+								<div class="numberRun2" id="pltom1"></div>
+							</div>
+							<div class="total-text">代理商人数</div>
+							<div class="total-end">上月新增：1,238</div>
+						</div>
+						<div class="group-item three">
+							<div class="total-num">
+								<div class="numberRun3" id="pltom2"></div>
+							</div>
+							<div class="total-text">订单总数</div>
+							<div class="total-end">上月新增：871,528</div>
+						</div>
+						<div class="group-item one">
+							<div class="total-num">
+								<div class="numberRun4" id="pltom3"></div>
+							</div>
+							<div class="total-text">销售额</div>
+							<div class="total-end">上月新增：81,201,425</div>
+						</div>
+					</div>
+					<div class="statistic-area">
+						<div class="statistic-item">
+							<div class="title">呱团数据统计</div>
+							<div class="line"></div>
+							<div class="total">
+								<div class="total-item">
+									<div class="text">代理商人数</div>
+									<div class="con">
+										12,264
+										<!-- <div class="numberRun5" id="pltom4"></div> -->
+									</div>
+								</div>
+								<div class="total-item">
+									<div class="text">用户人数</div>
+									<div class="con">27,654</div>
+								</div>
+								<div class="total-item">
+									<div class="text">订单量</div>
+									<div class="con">1,782,691</div>
+								</div>
+								<div class="total-item">
+									<div class="text">销售额</div>
+									<div class="con">149,746,072</div>
+								</div>
+							</div>
+						</div>
+						<div class="statistic-item">
+							<div class="title">朴选数据统计</div>
+							<div class="line"></div>
+							<div class="total">
+								<div class="total-item">
+									<div class="text">代理商人数</div>
+									<div class="con">2,203</div>
+								</div>
+								<div class="total-item">
+									<div class="text">用户人数</div>
+									<div class="con">5,142</div>
+								</div>
+								<div class="total-item">
+									<div class="text">订单量</div>
+									<div class="con">308,534</div>
+								</div>
+								<div class="total-item">
+									<div class="text">销售额</div>
+									<div class="con">24,374,206</div>
+								</div>
+							</div>
+						</div>
+						<div class="statistic-item">
+							<div class="title">团鲜数据统计</div>
+							<div class="line"></div>
+							<div class="total">
+								<div class="total-item">
+									<div class="text">代理商人数</div>
+									<div class="con">1,726</div>
+								</div>
+								<div class="total-item">
+									<div class="text">用户人数</div>
+									<div class="con">4,120</div>
+								</div>
+								<div class="total-item">
+									<div class="text">订单量</div>
+									<div class="con">255,494</div>
+								</div>
+								<div class="total-item">
+									<div class="text">销售额</div>
+									<div class="con">22,483,531</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="add-area">
+					<div class="add-area-l">
+						<div id="main1" style="width: 100%;height: 260px;"></div>
+					</div>
+					<div class="add-area-r">
+						<div id="main2" style="width: 100%;height: 260px;"></div>
+					</div>
+					
+				</div>
+				<!-- <img src="images/manager/bottom-left.png"> -->
+			</div>
+			<div class="main-right">
+				<img src="images/manager/top-right.png">
+				<div class="img-bg">
+					<h5>月销售趋势</h5>
+					<div class="main" id="main" style="width: 100%;height: 260px;"></div>
+				</div>
+				<!-- <img src="images/manager/bottom-right.png"> -->
+			</div>
+		</div>
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/number.js"></script>
+		<script src="js/dateDeal.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function () {
+				var array = getDifferentDate(-11,1)
+				var rndTime = 3000
+				// 1
+				var numRun1 = $(".numberRun1").numberAnimate({
+				    num: '36916',
+				    // speed: 2000,
+					speed: 10,
+				    symbol: ","
+				});
+				var nums1 = 36916;
+				
+				setInterval(function () {
+				    nums1 += rnd(1,3);
+				    // console.log(nums1)
+				    // console.log(numRun6)
+				    numRun1.resetData(nums1);
+				}, 3000);
+			
+			// 2
+			var numRun2 = $(".numberRun2").numberAnimate({
+				    num: '16193',
+				    speed: 10,
+				    symbol: ","
+				});
+				var nums2 = 16193;
+				setInterval(function () {
+				    nums2 += 1;
+				    // console.log(nums6)
+				    // console.log(numRun6)
+				    numRun2.resetData(nums2);
+				},300000);
+				// 3
+				var numRun3 = $(".numberRun3").numberAnimate({
+					    num: '2346719',
+					    speed: 10,
+					    symbol: ","
+					});
+					var nums3 = 2346719;
+					setInterval(function () {
+					    nums3 += rnd(5,15);
+					    // console.log(nums6)
+					    // console.log(numRun6)
+					    numRun3.resetData(nums3);
+					},3000);
+				// 4
+				var numRun4 = $(".numberRun4").numberAnimate({
+						num: '196603809',
+						speed: 10,
+						symbol: ","
+					});
+					var nums4 = 196603809;
+					setInterval(function () {
+						nums4 += rnd(160,800);
+						numRun4.resetData(nums4);
+					},3000);
+				// 5
+				var numRun5 = $(".numberRun5").numberAnimate({
+						num: '12000',
+						speed: 2000,
+						symbol: ","
+					});
+					var nums5 = 12000;
+					setInterval(function () {
+						nums5 += rnd(0,20);
+						numRun5.resetData(nums5);
+					}, rnd(0,5));
+					
+					
+					function rnd(min, max) {
+					    return Math.floor(Math.random() * (max - min + 1) + ~~min)
+					}
+					// ----- 统计图 -----
+					// 各级代理商占比
+					option1 = {
+						title: {
+							text: '各级代理商占比',
+							top: 20,
+							left: 80,
+							textStyle: {
+								color: '#FFFFFF'
+							
+							}
+						},
+					    tooltip: {
+					        trigger: 'item',
+					        formatter: '{a} <br/>{b}: {c} ({d}%)'
+					    },
+					    legend: {
+							top: 220,
+					        left: 50,
+					        data: [{name: '一级',textStyle: {
+								color: '#0091F1'
+							}},{name: '二级',textStyle: {color: '#00D98B'}},{name: '三级', textStyle: {
+								color: '#EB6F49'}
+							}]
+					    },
+						grid: {
+							top: 10,
+							containLabel: true
+						},
+					    series: [
+					        {
+					            name: '商品类别销售占比',
+					            type: 'pie',
+					            radius: ['25%', '45%'],
+					            // avoidLabelOverlap: false,
+					            label: {
+					                formatter: '{b}\n {d}%'
+					            },
+					            labelLine: {
+					                
+					            },
+					             itemStyle: {
+					                emphasis: {
+					                    shadowBlur: 10,
+					                    shadowOffsetX: 0,
+					                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+					                 },
+					                
+					                color:function(params) {
+					                //自定义颜色
+					                var colorList = [          
+					                        '#0091F1', '#00D98B', '#EB6F49'
+					                    ];
+					                    return colorList[params.dataIndex]
+					                 }
+					                
+					            },
+					            data: [
+					                {value: 39, name: '一级'},
+					                {value: 7, name: '二级'},
+					                {value: 54, name: '三级'}
+					            ]
+					        }
+					    ]
+					};
+					 var myChart1 = echarts.init(document.getElementById('main1'));
+					 myChart1.setOption(option1);
+					// 月代理商增长量
+					 option2 = {
+					     tooltip: {
+					         trigger: 'axis',
+					         axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+					             type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+					         }
+					     },
+						 grid: {
+							 top: 80,
+							 left: '9%',
+							 right: '9%',
+							 height: '134'
+						 },
+					     title: {
+					     	text: '月代理商增长量',
+					     	top: 20,
+					     	left: 160,
+					     	textStyle: {
+					     		color: '#FFFFFF'
+					     	}
+					     },
+					     xAxis: [
+					         {
+					             type: 'category',
+					             data: array,
+					             axisTick: {      //x轴刻度线
+					                 show: false
+					             },
+								 axisLabel:{
+									 color: '#ffffff',
+									 fontSize: 8
+								 },
+								 axisLine: {
+									 lineStyle: {
+									    color: 'rgba(17,83,114,.8)',
+									 	type: 'dashed'
+									 }
+								 }
+					         }
+					          
+					     ],
+					     yAxis: [
+					         {
+					             type: 'value',
+								 name: '人数',
+								 nameTextStyle: {
+									 color: '#ffffff',
+									 align: 'right',
+									 fontSize: 10,
+									 padding: [0,8,0,0]
+								 },
+								 nameGap: 15,
+					             axisLine: {
+					                show: false,
+					             },
+					             axisTick:{       //y轴刻度线
+					               "show":false
+					              },
+					             axisLabel: {
+					                textStyle: {
+					                     color: '#fff'
+					               }
+					             },
+								 splitLine: {
+								     lineStyle: {
+								         color: 'rgba(17,83,114,.8)',
+								 		type: 'dashed'
+								     }
+								 }
+					             
+					         }
+					     ],
+					     series: [
+					           {
+					             type: 'bar',
+					             barGap: '-100%',
+					             barCategoryGap: '20',
+					             barWidth: '40%',
+					             data: [4000,4000,4000,4000,4000,4000,4000,4000,4000,4000,4000,4000],
+								 itemStyle: {
+									 color: 'rgba(10,252,255,.2)'
+								 },
+					             animation: false
+					         },
+					         {
+					             type: 'bar',
+					             barWidth: '40%',
+					               itemStyle: {
+					                color: '#02D0E7'
+					             },
+					             data: [2000, 2980, 1000, 3300, 2200, 3800, 300,2700,2700,2700,2700,3100]
+					         }
+					     ]
+					 };
+					
+					var myChart2 = echarts.init(document.getElementById('main2'));
+					myChart2.setOption(option2);
+					// 月销售趋势
+					 var myChart = echarts.init(document.getElementById('main'));
+					option = {
+					    legend: {
+					        data: ["销售额"],
+							top: 5,
+							left: 20,
+							textStyle: {
+								color: '#0DD5ED'
+							},
+							itemHeight: 9
+							
+					    },
+						grid: {
+							top: 40,
+							left:'5%',
+							right: '8%',
+							containLabel: true
+						},
+					    xAxis: {
+					        type: 'category',
+							 boundaryGap: false,
+					        data: array,
+					          axisTick: {      //x轴刻度线
+					               "show":false
+					          },
+							  axisLine: {
+								  lineStyle: {
+									  color: '#00A0E9'
+									  
+								  }
+							  },
+							  axisLabel: {
+								  color: '#0DD5ED',
+								  'interval':0,
+								   rotate: -30,
+								   padding:[0,0,0,0],
+								   fontSize: 9,
+								   fontWeight: 'bold'
+							  }
+					    },
+					    yAxis: {
+					        type: 'value',
+					          axisTick:{       //y轴刻度线
+					              "show":false
+					             },
+					            axisLabel: {
+					               textStyle: {
+					                color: 'rgba(232,232,232,1)'
+					              }
+					            },
+					             axisLine: { // y轴轴线设置
+					               show: false
+					            },
+					            // y轴分割线
+					            splitLine: {
+					                lineStyle: {
+					                    color: 'rgba(17,83,114,.8)',
+										type: 'dashed'
+					                }
+					            }
+					    },
+					    series: [{
+					        name: '销售额',
+					        data: [30000, 45000, 50000, 55000, 50000, 20000, 25000,30000,45000,50000,60000,45000,40000],
+					        type: 'line',
+					        showSymbol: false,
+					        smooth: true,
+					        lineStyle: {
+					            color:'#00EAFF'
+					        },
+							color: '#00EAFF',  // 修改完可以修改 legend 线条颜色
+						   markPoint: {
+								data: [
+									{symbol: 'circle',type: 'max', name: '最大值',
+									   label: {show: false}, 
+									    itemStyle: {
+										borderColor: '#00EAFF',
+										color: '#ffffff',
+										borderWidth:3
+									},symbolSize: 7}
+								]
+							}
+					            
+					    }]
+					};
+					 myChart.setOption(option);
+					
+					
+				})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,522 @@
+body{
+    background: url('../images/bg.png')no-repeat;
+    /* background: #000000; */
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.main-body{
+    padding: 0 40px;
+}
+.head-img img{
+   width: 100%;
+   height: 60px;
+}
+.cont-box{
+    display: flex;
+    align-items:flex-end;
+}
+.left-box,.right-box{
+   flex: 2.9;
+}
+.center-box{
+    flex: 4;
+    padding: 0 10px;
+}
+.up-numb{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.up-numb .span-ren{
+    color: #FFFFFF;
+}
+
+.up-numb{
+    width: 100%;
+}
+.numb-img{
+    margin: 10px 0;
+    padding: 0 10px 0 20px;
+    flex: 3;
+    
+}
+.numb-img img{
+    margin-right: 10px;
+    width: 90%;
+}
+.img-box img{
+    width: 100%;
+}
+.img-box-1{
+   position: relative;
+    height: 250px;
+    width: 100%;
+    background: url(../images/left_zhi.png)no-repeat;
+    background-size: 100% 100%;
+}
+#left_zhi{
+    width: 90%;
+    height: 200px;
+    position: absolute;
+    top: 35px;
+    left: 10px;
+}
+.img-box-2{
+    position: relative;
+    background: url(../images/left_pie_img.png)no-repeat;
+    height: 300px;
+    background-size: 100% 100%;
+    width: 100%;
+}
+#pie{
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+
+}
+.numb{
+    flex: 6;
+}
+.up-numb .numb{
+    background: linear-gradient(#00EAFF, #00EAFF) left top,
+		linear-gradient(#00EAFF, #00EAFF) left top,
+		linear-gradient(#00EAFF, #00EAFF) right top,
+		linear-gradient(#00EAFF, #00EAFF) right top,
+		linear-gradient(#00EAFF, #00EAFF) left bottom,
+		linear-gradient(#00EAFF, #00EAFF) left bottom,
+		linear-gradient(#00EAFF, #00EAFF) right bottom,
+		linear-gradient(#00EAFF, #00EAFF) right bottom;
+	background-repeat: no-repeat;
+    background-size: 5px 1px, 1px 5px;
+}
+.up-numb .numb .mt-number-animate-dom{
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    
+  
+}
+.up-numb  span{
+    
+    /* font-weight: 300; */
+}
+
+.center-box-head{
+    display: flex;
+    color: #FFFFFF;
+    font-size: 10px;
+    flex-wrap: wrap;
+
+}
+.data-1{
+    width:  50%;
+   
+}
+.flex-class{
+    display: flex;
+    justify-content: space-between;
+}
+
+.aa{
+    display: flex;
+    align-items: center;
+    flex: 3;
+}
+.aa .name-s{
+    color: #00EAFF;
+}
+.aa .number-class{
+    flex: 1;
+    padding-left: 6px;
+}
+
+.aa1{
+    display: flex;
+    flex: 3;
+    align-items: center;
+    justify-content: space-between;
+}
+.aa1 span{
+    color: #FF9745;
+    font-size: 11px;
+}
+
+
+
+
+.j-ao-1{
+    margin-right: 5px;
+}
+.j-ao-2{
+    margin-left: 5px;
+}
+
+.j-ao{
+    margin-bottom: 10px;
+    background: linear-gradient(#00EAFF, #00EAFF) left top,
+    linear-gradient(#00EAFF, #00EAFF) left top,
+    linear-gradient(#00EAFF, #00EAFF) right top,
+    linear-gradient(#00EAFF, #00EAFF) right top,
+    linear-gradient(#00EAFF, #00EAFF) left bottom,
+    linear-gradient(#00EAFF, #00EAFF) left bottom,
+    linear-gradient(#00EAFF, #00EAFF) right bottom,
+    linear-gradient(#00EAFF, #00EAFF) right bottom;
+    background-repeat: no-repeat;
+    background-size: 5px 1px, 1px 5px;
+    
+}
+.j-ao-in{
+  background:rgba(0,190,255,0.08);
+  padding: 10px;
+  min-height: 130px;
+}
+.j-ao-head{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.j-ao-head span{
+    padding: 0 5px 4px 5px;
+    padding-bottom: 4px;
+    border-bottom:1px solid #ddd;;
+    -webkit-border-image: url(../images/line.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(../images/line.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(../images/line.png) 30 round;
+}
+
+
+
+#zhe2{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    height: 200px;
+    left: 0;
+}
+.center-cont img{
+    width: 100%;
+}
+.center-cont{
+    position: relative;
+}
+.center-cont-data{
+    position: absolute;
+    /* color: #00faff; */
+    font-size: 12px;
+    width: 100%;
+    top: 45px;
+    left: 0px;
+}
+.center-cont-data p span{
+    font-size: 3px;
+}
+.right-box img{
+    width: 100%;
+}
+.center-cont-data{
+}
+.center-cont-data-in{
+    display: flex;
+    width: 100%;
+    padding:0 18px;
+    box-sizing: border-box;
+
+}
+.cont-data-info{
+    border: 0.5px solid #439AFF;
+    border-radius: 4px;
+    flex: 1;
+    padding: 5px 10px  10px 10px;
+}
+.cont-data-info p{
+    line-height: 7px;
+}
+.cont-data-info .data1  span:nth-child(2){
+    color: #16D6FF;
+    font-weight: 800;
+}
+.cont-data-info .data1 {
+    color: #439AFF;
+    display:flex;
+    justify-content: space-between;    
+}
+.cont-data-info .data2{
+    color: #439AFF;
+}
+.cont-data-info .data3{
+    padding: 10px 0 10 0;
+}
+.cont-data-info .data3 span{
+    color: #FFFFFF;
+}
+.cont-data-info .data4 {
+    color: #FFFFFF;
+    padding: 2px 0;
+}
+.cont-data-info .data4 span{
+    color: #FFFFFF;
+    font-size: 24px;
+
+}
+.cont-data-info .data5 span{
+}
+.cont-data-info .data5 span:nth-child(1){
+    font-size: 10px;
+    color: #439AFF;
+  
+}
+.cont-data-info .data5 span:nth-child(2){
+    color: #A21727;
+}
+.cont-data-info .data5 span:nth-child(3){
+    color: #439AFF;
+}
+.cont-data-info .data5 span:nth-child(4){
+    color: #048D66;
+}
+
+.dd-mian{
+    position: relative;
+}
+.dd-box{
+    position: absolute;
+    color: rgba(82, 255, 255, 1);
+    left: 60px;
+    font-size: 8px;
+}
+.dd-mian .dd-1{
+    top: 62px;
+}
+.dd-mian .dd-2{
+    top: 206px;
+}
+.dd-mian .dd-3{
+    top: 355px;
+}
+.dd-mian .dd-4{
+    top: 500px;
+}
+
+/*  */
+
+#pltom1 {
+    background:rgba(22,214,255,0.08);
+    display: flex;
+    align-items: center;
+
+}
+#pltom1 .mt-number-animate {
+    line-height: 35px;
+    height: 35px;
+    font-size: 30px;
+    font-weight: 800;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    color: #00faff;
+}
+
+#pltom1 .mt-number-animate .mt-number-animate-dot {
+    width: 13px;
+    line-height: 40px;
+    float: left;
+    font-size: 25px;
+    text-align: center;
+}
+
+#pltom1 .mt-number-animate .mt-number-animate-dom {
+    width: 19px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 0;
+}
+
+#pltom2 .mt-number-animate {
+    line-height: 35px;
+    height: 35px;
+    font-size: 35px;
+    font-weight: 800;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    background:rgba(22,214,255,0.08);
+    color: #00faff;
+}
+
+#pltom2 .mt-number-animate .mt-number-animate-dot {
+    width: 19px;
+    line-height: 40px;
+    float: left;
+    text-align: center;
+}
+
+#pltom2 .mt-number-animate .mt-number-animate-dom {
+    width: 18px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 0;
+}
+
+#pltom3 .mt-number-animate {
+    line-height: 15px;
+    height: 15px;
+    font-size: 12px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+#pltom3 .mt-number-animate .mt-number-animate-dot {
+    width: 8px;
+    line-height: 20px;
+    float: left;
+    text-align: center;
+}
+
+#pltom3 .mt-number-animate .mt-number-animate-dom {
+    width: 10px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 0;
+}
+
+
+
+#pltom4 .mt-number-animate {
+    line-height: 15px;
+    height: 15px;
+    font-size: 12px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+#pltom4 .mt-number-animate .mt-number-animate-dot {
+    width: 8px;
+    line-height: 20px;
+    float: left;
+    text-align: center;
+}
+
+#pltom4 .mt-number-animate .mt-number-animate-dom {
+    width: 10px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 0;
+}
+
+#pltom5 .mt-number-animate {
+    line-height: 15px;
+    height: 15px;
+    font-size: 12px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+#pltom5 .mt-number-animate .mt-number-animate-dot {
+    width: 8px;
+    line-height: 20px;
+    float: left;
+    text-align: center;
+}
+
+#pltom5 .mt-number-animate .mt-number-animate-dom {
+    width: 10px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 0;
+}
+
+
+#pltom6 .mt-number-animate {
+    line-height: 15px;
+    height: 15px;
+    font-size: 12px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+#pltom6 .mt-number-animate .mt-number-animate-dot {
+    width: 8px;
+    line-height: 20px;
+    float: left;
+    text-align: center;
+}
+
+#pltom6 .mt-number-animate .mt-number-animate-dom {
+    width: 10px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 0;
+}
+#pltom3,#pltom4,#pltom5,#pltom6{
+    position: relative;
+    color: #FFFFFF;
+}
+#pltom3::after{
+    position: absolute; 
+    bottom: 0;
+    color: #FFFFFF;
+    content: '万';
+    font-size: 9px;
+}
+#pltom4::after{
+    position: absolute; 
+    bottom: 0;
+    color: #FFFFFF;
+    content: '次';
+    font-size: 9px;
+}
+#pltom5::after{
+    position: absolute; 
+    bottom: 0;
+    color: #FFFFFF;
+    content: '人';
+    font-size: 9px;
+}
+
+
+#pltom12 .mt-number-animate {
+    height: 20px;
+    line-height: 20px;
+    font-size: 36px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+#pltom12 .mt-number-animate .mt-number-animate-dot {
+    width: 3px;
+    height: 20px;
+    float: left;
+    text-align: center;
+    color: #FFEA00;
+    font-size: 11px;
+}
+
+#pltom12 .mt-number-animate .mt-number-animate-dom {
+    width: 8px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 0;
+}
+
+#pltom12 .mt-number-animate .mt-number-animate-dom .mt-number-animate-span {
+    width: 100%;
+    float: left;
+    color: #FFEA00;
+    font-size: 12px;
+    text-shadow: rgba(235, 235, 235, 0.397) 1px 1px 5px
+}
